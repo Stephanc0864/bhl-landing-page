@@ -7,13 +7,16 @@ import { SchemaMarkup } from "@/components/seo/schema-markup";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { 
-  Activity, ArrowRight, CheckCircle2,
+  Activity, ArrowRight, CheckCircle2, ChevronDown,
   Hotel, Plus, TrendingUp, Users, Zap, DollarSign
 } from "lucide-react";
 import heroImage from "@/assets/images/hero-hotel.png";
-import hbotImage from "@/assets/images/hbot-soft-chamber.jpg";
-import redLightImage from "@/assets/images/red-light.png";
-import saunaImage from "@/assets/images/sauna.png";
+import hbotImage from "@/assets/images/hbot-chamber.jpg";
+import redLightImage from "@/assets/images/redlight-therapy.jpg";
+import saunaImage from "@/assets/images/infrared-sauna.jpg";
+import compressionImage from "@/assets/images/compression-boots.jpg";
+import pemfImage from "@/assets/images/pemf-device.jpg";
+import pemfTreatmentImage from "@/assets/images/pemf-treatment.jpg";
 import roiWellnessImage from "@/assets/images/roi-wellness.png";
 import turnkeyDesignImage from "@/assets/images/turnkey-design.png";
 import turnkeyTrainingImage from "@/assets/images/turnkey-training.png";
@@ -83,6 +86,22 @@ export default function Hotels() {
               </motion.div>
             </motion.div>
           </div>
+
+          <motion.a
+            href="#roi"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5 }}
+            className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1 text-muted-foreground/60 hover:text-foreground transition-colors cursor-pointer"
+          >
+            <span className="text-xs font-medium uppercase tracking-widest">Scroll</span>
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+            >
+              <ChevronDown className="w-6 h-6" />
+            </motion.div>
+          </motion.a>
         </section>
 
         {/* The Math Section */}
@@ -174,67 +193,43 @@ export default function Hotels() {
         {/* Equipment Section */}
         <section className="py-24 bg-background" id="equipment">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <motion.div 
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={STAGGER}
-              >
-                <motion.h2 variants={FADE_UP} className="text-3xl md:text-5xl font-serif text-foreground mb-6">
-                  Clinical Modalities,<br/>Premium Experience.
-                </motion.h2>
-                <motion.p variants={FADE_UP} className="text-lg text-muted-foreground mb-8">
-                  We don't just provide equipment; we curate an ecosystem of the world's most advanced recovery tech, designed for high-end environments.
-                </motion.p>
-                
-                <div className="space-y-6">
-                  {[
-                    "HBOT (Hyperbaric Oxygen) Chamber",
-                    "Red Light Therapy Panels",
-                    "Full-Spectrum Infrared Sauna",
-                    "Dynamic Lymphatic Drainage Suits",
-                    "Targeted PEMF Devices"
-                  ].map((item, i) => (
-                    <motion.div key={i} variants={FADE_UP} className="flex items-center gap-4">
-                      <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
-                        <CheckCircle2 className="w-5 h-5 text-primary" />
-                      </div>
-                      <span className="text-foreground font-medium text-lg">{item}</span>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={FADE_UP}
+              className="text-center max-w-3xl mx-auto mb-16"
+            >
+              <h2 className="text-3xl md:text-5xl font-serif text-foreground mb-4">The Recovery Pod Ecosystem</h2>
+              <p className="text-lg text-muted-foreground">Clinical-grade modalities curated for high-end environments. Every piece of equipment is BH Labs branded and professionally installed.</p>
+            </motion.div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <motion.div 
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { name: "HBOT Chamber", desc: "Hyperbaric Oxygen Therapy — pressurized soft chamber for accelerated recovery and cellular regeneration.", image: hbotImage },
+                { name: "Red Light Therapy", desc: "Full-body red and near-infrared panels for skin rejuvenation, inflammation reduction, and muscle recovery.", image: redLightImage },
+                { name: "Infrared Sauna", desc: "Full-spectrum infrared sauna for deep tissue detoxification and cardiovascular conditioning.", image: saunaImage },
+                { name: "Compression Therapy", desc: "Dynamic lymphatic drainage suits for enhanced circulation and faster post-workout recovery.", image: compressionImage },
+                { name: "PEMF Device", desc: "Pulsed Electromagnetic Field therapy for cellular recovery, pain relief, and bone healing.", image: pemfImage },
+                { name: "PEMF Treatment", desc: "Targeted PEMF application with BH Labs branded equipment for localized therapy sessions.", image: pemfTreatmentImage }
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
-                  className="col-span-2 aspect-video rounded-2xl overflow-hidden"
+                  transition={{ delay: i * 0.1, duration: 0.5 }}
+                  className="group rounded-2xl overflow-hidden border border-border bg-card hover:shadow-lg transition-shadow"
                 >
-                  <img src={hbotImage} alt="HBOT Soft Chamber" className="w-full h-full object-cover" />
+                  <div className="aspect-[4/5] overflow-hidden">
+                    <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-lg font-medium text-foreground mb-1">{item.name}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                  </div>
                 </motion.div>
-                <motion.div 
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
-                  className="aspect-square rounded-2xl overflow-hidden"
-                >
-                  <img src={redLightImage} alt="Red Light Therapy" className="w-full h-full object-cover" />
-                </motion.div>
-                <motion.div 
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  className="aspect-square rounded-2xl overflow-hidden"
-                >
-                  <img src={saunaImage} alt="Infrared Sauna" className="w-full h-full object-cover" />
-                </motion.div>
-              </div>
+              ))}
             </div>
           </div>
         </section>

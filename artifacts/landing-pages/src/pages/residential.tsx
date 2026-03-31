@@ -7,12 +7,16 @@ import { SchemaMarkup } from "@/components/seo/schema-markup";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { 
-  Building, CheckCircle2, TrendingUp, ShieldCheck, 
+  Building, CheckCircle2, TrendingUp, ShieldCheck, ChevronDown,
   Leaf, Zap, Clock, ArrowRight
 } from "lucide-react";
 import heroImage from "@/assets/images/hero-residential.png";
-import hbotImage from "@/assets/images/hbot-soft-chamber.jpg";
-import saunaImage from "@/assets/images/sauna.png";
+import hbotImage from "@/assets/images/hbot-chamber.jpg";
+import redLightImage from "@/assets/images/redlight-therapy.jpg";
+import saunaImage from "@/assets/images/infrared-sauna.jpg";
+import compressionImage from "@/assets/images/compression-boots.jpg";
+import pemfImage from "@/assets/images/pemf-device.jpg";
+import pemfTreatmentImage from "@/assets/images/pemf-treatment.jpg";
 
 const FADE_UP = {
   hidden: { opacity: 0, y: 30 },
@@ -72,10 +76,26 @@ export default function Residential() {
               </motion.div>
             </motion.div>
           </div>
+
+          <motion.a
+            href="#value"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5 }}
+            className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1 text-muted-foreground/60 hover:text-foreground transition-colors cursor-pointer"
+          >
+            <span className="text-xs font-medium uppercase tracking-widest">Scroll</span>
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+            >
+              <ChevronDown className="w-6 h-6" />
+            </motion.div>
+          </motion.a>
         </section>
 
         {/* Value Proposition */}
-        <section className="py-24 bg-card">
+        <section className="py-24 bg-card" id="value">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <motion.div 
@@ -129,39 +149,45 @@ export default function Residential() {
 
         {/* The Pod Ecosystem */}
         <section className="py-24 bg-background" id="equipment">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-4xl">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div 
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={FADE_UP}
-              className="mb-16"
+              className="text-center max-w-3xl mx-auto mb-16"
             >
               <h2 className="text-3xl md:text-5xl font-serif text-foreground mb-6">The Recovery Pod Ecosystem</h2>
               <p className="text-lg text-muted-foreground">A complete, clinical-grade wellness center packaged perfectly for residential amenities. Installed and supported by experts.</p>
             </motion.div>
 
-            <motion.div 
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={STAGGER}
-              className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 text-left"
-            >
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { name: "HBOT Chamber", desc: "Hyperbaric Oxygen Therapy" },
-                { name: "Red Light", desc: "Therapy panels" },
-                { name: "Infrared Sauna", desc: "Deep tissue detox" },
-                { name: "Lymphatic Suits", desc: "Dynamic compression" },
-                { name: "PEMF Devices", desc: "Cellular recovery" },
-                { name: "Custom Design", desc: "Architectural integration" }
+                { name: "HBOT Chamber", desc: "Hyperbaric Oxygen Therapy — pressurized soft chamber for accelerated recovery.", image: hbotImage },
+                { name: "Red Light Therapy", desc: "Full-body red and near-infrared panels for skin rejuvenation and recovery.", image: redLightImage },
+                { name: "Infrared Sauna", desc: "Full-spectrum infrared sauna for deep tissue detox and cardiovascular health.", image: saunaImage },
+                { name: "Compression Therapy", desc: "Dynamic lymphatic drainage suits for enhanced circulation and recovery.", image: compressionImage },
+                { name: "PEMF Device", desc: "Pulsed Electromagnetic Field therapy for cellular recovery and pain relief.", image: pemfImage },
+                { name: "PEMF Treatment", desc: "Targeted PEMF application with BH Labs branded equipment.", image: pemfTreatmentImage }
               ].map((item, i) => (
-                <motion.div key={i} variants={FADE_UP} className="bg-card p-6 rounded-2xl border border-border flex flex-col justify-center">
-                  <div className="font-medium text-foreground mb-1">{item.name}</div>
-                  <div className="text-sm text-muted-foreground">{item.desc}</div>
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1, duration: 0.5 }}
+                  className="group rounded-2xl overflow-hidden border border-border bg-card hover:shadow-lg transition-shadow"
+                >
+                  <div className="aspect-[4/5] overflow-hidden">
+                    <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-lg font-medium text-foreground mb-1">{item.name}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                  </div>
                 </motion.div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </section>
 
