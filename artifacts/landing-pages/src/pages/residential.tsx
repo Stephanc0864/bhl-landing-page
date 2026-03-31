@@ -17,6 +17,8 @@ import saunaImage from "@/assets/images/infrared-sauna.jpg";
 import compressionImage from "@/assets/images/compression-boots.jpg";
 import pemfImage from "@/assets/images/pemf-device.jpg";
 import pemfTreatmentImage from "@/assets/images/pemf-treatment.jpg";
+import lymphaticImage from "@/assets/images/lymphatic-drainage.jpg";
+import logoDark from "@/assets/images/logo-dark.png";
 
 const FADE_UP = {
   hidden: { opacity: 0, y: 30 },
@@ -53,6 +55,9 @@ export default function Residential() {
               variants={STAGGER}
               className="max-w-3xl"
             >
+              <motion.div variants={FADE_UP} className="mb-6">
+                <img src={logoDark} alt="BH Labs Logo" className="w-16 h-16 mb-4" />
+              </motion.div>
               <motion.div variants={FADE_UP} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/50 text-secondary-foreground text-sm font-medium mb-6">
                 <Building className="w-4 h-4" />
                 <span>For Luxury Residential & HOAs</span>
@@ -167,6 +172,7 @@ export default function Residential() {
                 { name: "Red Light Therapy", desc: "Full-body red and near-infrared panels for skin rejuvenation and recovery.", image: redLightImage },
                 { name: "Infrared Sauna", desc: "Full-spectrum infrared sauna for deep tissue detox and cardiovascular health.", image: saunaImage },
                 { name: "Compression Therapy", desc: "Dynamic lymphatic drainage suits for enhanced circulation and recovery.", image: compressionImage },
+                { name: "Lymphatic Drainage", desc: "Advanced lymphatic compression therapy combining red light and pressotherapy for enhanced circulation and detoxification.", image: lymphaticImage },
                 { name: "PEMF Device", desc: "Pulsed Electromagnetic Field therapy for cellular recovery and pain relief.", image: pemfImage },
                 { name: "PEMF Treatment", desc: "Targeted PEMF application with BH Labs branded equipment.", image: pemfTreatmentImage }
               ].map((item, i) => (

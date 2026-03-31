@@ -17,7 +17,10 @@ import saunaImage from "@/assets/images/infrared-sauna.jpg";
 import compressionImage from "@/assets/images/compression-boots.jpg";
 import pemfImage from "@/assets/images/pemf-device.jpg";
 import pemfTreatmentImage from "@/assets/images/pemf-treatment.jpg";
+import lymphaticImage from "@/assets/images/lymphatic-drainage.jpg";
 import roiWellnessImage from "@/assets/images/roi-wellness.png";
+import logoDark from "@/assets/images/logo-dark.png";
+import logoLight from "@/assets/images/logo-light.png";
 import turnkeyDesignImage from "@/assets/images/turnkey-design.png";
 import turnkeyTrainingImage from "@/assets/images/turnkey-training.png";
 import turnkeyScienceImage from "@/assets/images/turnkey-science.png";
@@ -58,6 +61,9 @@ export default function Hotels() {
               variants={STAGGER}
               className="max-w-3xl"
             >
+              <motion.div variants={FADE_UP} className="mb-6">
+                <img src={logoDark} alt="BH Labs Logo" className="w-16 h-16 mb-4" />
+              </motion.div>
               <motion.div variants={FADE_UP} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/50 text-secondary-foreground text-sm font-medium mb-6">
                 <Hotel className="w-4 h-4" />
                 <span>For Hospitality & Resorts</span>
@@ -210,6 +216,7 @@ export default function Hotels() {
                 { name: "Red Light Therapy", desc: "Full-body red and near-infrared panels for skin rejuvenation, inflammation reduction, and muscle recovery.", image: redLightImage },
                 { name: "Infrared Sauna", desc: "Full-spectrum infrared sauna for deep tissue detoxification and cardiovascular conditioning.", image: saunaImage },
                 { name: "Compression Therapy", desc: "Dynamic lymphatic drainage suits for enhanced circulation and faster post-workout recovery.", image: compressionImage },
+                { name: "Lymphatic Drainage", desc: "Advanced lymphatic compression therapy combining red light and pressotherapy for enhanced circulation and detoxification.", image: lymphaticImage },
                 { name: "PEMF Device", desc: "Pulsed Electromagnetic Field therapy for cellular recovery, pain relief, and bone healing.", image: pemfImage },
                 { name: "PEMF Treatment", desc: "Targeted PEMF application with BH Labs branded equipment for localized therapy sessions.", image: pemfTreatmentImage }
               ].map((item, i) => (
@@ -331,6 +338,9 @@ export default function Hotels() {
                 variants={FADE_UP}
               >
                 <div className="bg-background/5 p-8 rounded-2xl border border-primary-foreground/20 backdrop-blur-md">
+                  <div className="flex justify-center mb-6">
+                    <img src={logoLight} alt="BH Labs" className="w-20 h-20" />
+                  </div>
                   <h3 className="text-2xl md:text-3xl font-serif mb-6 text-primary-foreground leading-snug">
                     "Wellness tourists spend 41-175% more than average travelers."
                   </h3>

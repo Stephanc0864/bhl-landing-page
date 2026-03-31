@@ -1,5 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
+import logoDark from "@/assets/images/logo-dark.png";
 
 export function Navbar() {
   const [location] = useLocation();
@@ -10,10 +11,8 @@ export function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center gap-2" data-testid="link-logo">
-              <div className="w-8 h-8 bg-primary rounded-sm flex items-center justify-center">
-                <span className="text-primary-foreground font-serif font-bold text-xl leading-none">BH</span>
-              </div>
+            <Link href="/" className="flex items-center gap-3" data-testid="link-logo">
+              <img src={logoDark} alt="BH Labs" className="w-12 h-12" />
               <span className="font-sans font-semibold text-lg tracking-tight uppercase">BH Labs</span>
             </Link>
           </div>

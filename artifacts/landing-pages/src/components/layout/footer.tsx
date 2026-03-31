@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Mail, Phone, Globe } from "lucide-react";
+import logoLight from "@/assets/images/logo-light.png";
 
 export function Footer() {
   return (
@@ -8,10 +9,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-primary-foreground rounded-sm flex items-center justify-center">
-                <span className="text-primary font-serif font-bold text-xl leading-none">BH</span>
-              </div>
+            <div className="flex items-center gap-3">
+              <img src={logoLight} alt="BH Labs" className="w-14 h-14" />
               <span className="font-sans font-semibold text-lg tracking-tight uppercase">BH Labs</span>
             </div>
             <p className="text-primary-foreground/70 text-sm max-w-xs">
