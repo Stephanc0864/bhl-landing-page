@@ -1,0 +1,32 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "I0yitfD90304fDQEIqO_1"
+uri = "file://artifacts/landing-pages/src/assets/images/hero-hotel.png"
+type = "image"
+title = "Hotel wellness spa interior"
+
+[[generated]]
+id = "K4SQfBtr-THmXoZjuT4m6"
+uri = "file://artifacts/landing-pages/src/assets/images/hero-residential.png"
+type = "image"
+title = "Residential condo wellness center"
+
+[[generated]]
+id = "GNk-JEq2bwZ7MLnyhRVrR"
+uri = "file://artifacts/landing-pages/src/assets/images/hbot.png"
+type = "image"
+title = "HBOT chamber in luxury clinic"
+
+[[generated]]
+id = "NSmZDO5w5F-lJY2Z8JaTg"
+uri = "file://artifacts/landing-pages/src/assets/images/red-light.png"
+type = "image"
+title = "Red light therapy room"
+
+[[generated]]
+id = "On7VqL7urh8qV6pdRXIZG"
+uri = "file://artifacts/landing-pages/src/assets/images/sauna.png"
+type = "image"
+title = "Luxury infrared sauna"

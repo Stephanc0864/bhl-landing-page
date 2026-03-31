@@ -50,6 +50,19 @@ Every package extends `tsconfig.base.json` which sets `composite: true`. The roo
 
 ## Packages
 
+### `artifacts/landing-pages` (`@workspace/landing-pages`)
+
+React + Vite landing pages for BH Labs Recovery Pod — a biohacking/wellness company that installs turnkey recovery pods in commercial and residential spaces.
+
+- Two landing pages with wouter routing:
+  - `/` — Hotels & Resorts (targeting hotel operators for wellness revenue)
+  - `/residential` — Luxury Residential / HOAs (targeting property managers and HOA boards)
+- Frontend-only (no backend required)
+- Uses framer-motion for scroll-triggered animations
+- AI-generated images for hero visuals and equipment photos
+- Lead capture forms (visual only, no backend submission)
+- Contact: info@thebiohacklab.com | www.bh-labs.com | 954-870-5814
+
 ### `artifacts/api-server` (`@workspace/api-server`)
 
 Express 5 API server. Routes live in `src/routes/` and use `@workspace/api-zod` for request and response validation and `@workspace/db` for persistence.
