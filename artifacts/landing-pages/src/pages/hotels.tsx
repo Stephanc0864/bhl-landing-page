@@ -62,7 +62,7 @@ export default function Hotels() {
               className="max-w-3xl"
             >
               <motion.div variants={FADE_UP} className="mb-6">
-                <img src={logoDark} alt="BH Labs Logo" className="w-16 h-16 mb-4" />
+                <img src={logoDark} alt="BH Labs Logo" className="w-24 h-24 mb-4" />
               </motion.div>
               <motion.div variants={FADE_UP} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/50 text-secondary-foreground text-sm font-medium mb-6">
                 <Hotel className="w-4 h-4" />
@@ -228,8 +228,8 @@ export default function Hotels() {
                   transition={{ delay: i * 0.1, duration: 0.5 }}
                   className="group rounded-2xl overflow-hidden border border-border bg-card hover:shadow-lg transition-shadow"
                 >
-                  <div className="aspect-[4/5] overflow-hidden">
-                    <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="aspect-[3/4] overflow-hidden">
+                    <img src={item.image} alt={item.name} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <div className="p-5">
                     <h3 className="text-lg font-medium text-foreground mb-1">{item.name}</h3>
@@ -339,7 +339,7 @@ export default function Hotels() {
               >
                 <div className="bg-background/5 p-8 rounded-2xl border border-primary-foreground/20 backdrop-blur-md">
                   <div className="flex justify-center mb-6">
-                    <img src={logoLight} alt="BH Labs" className="w-20 h-20" />
+                    <img src={logoLight} alt="BH Labs" className="w-28 h-28" />
                   </div>
                   <h3 className="text-2xl md:text-3xl font-serif mb-6 text-primary-foreground leading-snug">
                     "Wellness tourists spend 41-175% more than average travelers."

@@ -10,7 +10,7 @@ export function Footer() {
           
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <img src={logoLight} alt="BH Labs" className="w-14 h-14" />
+              <img src={logoLight} alt="BH Labs" className="w-20 h-20" />
               <span className="font-sans font-semibold text-lg tracking-tight uppercase">BH Labs</span>
             </div>
             <p className="text-primary-foreground/70 text-sm max-w-xs">

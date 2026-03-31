@@ -56,7 +56,7 @@ export default function Residential() {
               className="max-w-3xl"
             >
               <motion.div variants={FADE_UP} className="mb-6">
-                <img src={logoDark} alt="BH Labs Logo" className="w-16 h-16 mb-4" />
+                <img src={logoDark} alt="BH Labs Logo" className="w-24 h-24 mb-4" />
               </motion.div>
               <motion.div variants={FADE_UP} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/50 text-secondary-foreground text-sm font-medium mb-6">
                 <Building className="w-4 h-4" />
@@ -184,7 +184,7 @@ export default function Residential() {
                   transition={{ delay: i * 0.1, duration: 0.5 }}
                   className="group rounded-2xl overflow-hidden border border-border bg-card hover:shadow-lg transition-shadow"
                 >
-                  <div className="aspect-[4/5] overflow-hidden">
+                  <div className="aspect-[3/4] overflow-hidden">
                     <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <div className="p-5">

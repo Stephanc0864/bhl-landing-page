@@ -12,7 +12,7 @@ export function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center gap-3" data-testid="link-logo">
-              <img src={logoDark} alt="BH Labs" className="w-12 h-12" />
+              <img src={logoDark} alt="BH Labs" className="w-16 h-16" />
               <span className="font-sans font-semibold text-lg tracking-tight uppercase">BH Labs</span>
             </Link>
           </div>
