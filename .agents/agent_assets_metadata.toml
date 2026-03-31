@@ -30,3 +30,33 @@ id = "On7VqL7urh8qV6pdRXIZG"
 uri = "file://artifacts/landing-pages/src/assets/images/sauna.png"
 type = "image"
 title = "Luxury infrared sauna"
+
+[[generated]]
+id = "XwZfc-jZIo9jD0W78Jvn0"
+uri = "file://attached_assets/generated_images/generated_image_0.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "2_1vuwv1HNtGLgCrCgJtC"
+uri = "file://attached_assets/generated_images/generated_image_1.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "7akhDWJnWHeFx3k3cNhVf"
+uri = "file://attached_assets/generated_images/generated_image_2.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "gzlQmSDOs0XYCLFOpTPlB"
+uri = "file://attached_assets/generated_images/generated_image_3.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "o1l1BZGI7Z2pjz-2Fiv_0"
+uri = "file://attached_assets/generated_images/generated_image_4.png"
+type = "image"
+title = "generated_image"

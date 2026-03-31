@@ -8,7 +8,7 @@ import {
   Leaf, Zap, Clock, ArrowRight
 } from "lucide-react";
 import heroImage from "@/assets/images/hero-residential.png";
-import hbotImage from "@/assets/images/hbot.png";
+import hbotImage from "@/assets/images/hbot-soft-chamber.jpg";
 import saunaImage from "@/assets/images/sauna.png";
 
 const FADE_UP = {
@@ -146,7 +146,7 @@ export default function Residential() {
             >
               {[
                 { name: "HBOT Chamber", desc: "Hyperbaric Oxygen Therapy" },
-                { name: "Red Light", desc: "Medical-grade panels" },
+                { name: "Red Light", desc: "Therapy panels" },
                 { name: "Infrared Sauna", desc: "Deep tissue detox" },
                 { name: "Lymphatic Suits", desc: "Dynamic compression" },
                 { name: "PEMF Devices", desc: "Cellular recovery" },
