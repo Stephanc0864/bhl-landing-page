@@ -184,8 +184,8 @@ export default function Residential() {
                   transition={{ delay: i * 0.1, duration: 0.5 }}
                   className="group rounded-2xl overflow-hidden border border-border bg-card hover:shadow-lg transition-shadow"
                 >
-                  <div className="aspect-[3/4] overflow-hidden">
-                    <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="overflow-hidden">
+                    <img src={item.image} alt={item.name} className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <div className="p-5">
                     <h3 className="text-lg font-medium text-foreground mb-1">{item.name}</h3>
