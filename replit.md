@@ -166,6 +166,28 @@ Standalone landing page for BH Labs Recovery Pod — Fitness and Sports Club ver
 - SEO: JSON-LD (Organization, Product, FAQPage, WebPage), OG/Twitter meta, canonical URL
 - Same visual theme and branding as hotel-landing artifact
 
+### `artifacts/residential-landing` (`@workspace/residential-landing`)
+
+Standalone landing page for BH Labs Recovery Pod — Luxury Residential vertical. Designed as a single-page ad campaign destination with no navigation to other verticals.
+
+- Single-page app (no router), renders residential page directly
+- Minimal sticky header: BH Labs logo + green "ROI Calculator" button + "Request a Meeting" button
+- No navbar links, no footer — fully standalone for paid ad traffic
+- All CTAs read "Request a Meeting"
+- Content sections: Hero → ROI Calculator → Summary bar → Value proposition (2 stat cards) → Loss aversion → Equipment grid (7 modalities) → Turnkey installation (4 steps) → Operations/maintenance → Social proof → FAQ → Contact form
+- Residential-specific contact form with:
+  - Role dropdown (Property Manager, HOA Board Member, Developer, etc.)
+  - Property Type dropdown (Condo, HOA, Mixed-Use, etc.)
+  - Current Amenities multi-select checkboxes
+  - Available Space number-only input
+  - Amenity/Wellness Fees dropdown with conditional fee amount field
+  - Decision Stage dropdown
+  - UTM parameter capture
+- ROI Calculator: sliders for units, monthly wellness fee, participation rate, operating cost
+- SEO: JSON-LD (Organization, Product, FAQPage, WebPage), OG/Twitter meta, canonical URL
+- Same visual theme and branding as hotel-landing artifact
+- Messaging focus: elevated resident wellness, luxury lifestyle differentiation, property value increase, wellness-forward positioning
+
 ### `scripts` (`@workspace/scripts`)
 
 Utility scripts package. Each script is a `.ts` file in `src/` with a corresponding npm script in `package.json`. Run scripts via `pnpm --filter @workspace/scripts run <script>`. Scripts can import any workspace package (e.g., `@workspace/db`) by adding it as a dependency in `scripts/package.json`.

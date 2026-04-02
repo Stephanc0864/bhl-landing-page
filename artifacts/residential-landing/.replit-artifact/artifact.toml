@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/residential-landing/"
+title = "BH Labs Luxury Residential Landing Page"
+version = "1.0.0"
+id = "artifacts/residential-landing"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/residential-landing/" ]
+localPort = 23705
+
+[services.development]
+run = "pnpm --filter @workspace/residential-landing run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/residential-landing", "run", "build" ]
+publicDir = "artifacts/residential-landing/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23705"
+BASE_PATH = "/residential-landing/"
