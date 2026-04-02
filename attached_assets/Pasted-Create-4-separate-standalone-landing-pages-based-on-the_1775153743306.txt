@@ -1,0 +1,128 @@
+Create 4 separate standalone landing pages based on the current BH Labs page.
+
+Goal:
+Turn the existing multi-category page with navigation into 4 dedicated campaign landing pages, one for each audience:
+1. Hotels & Resorts
+2. Fitness and Sports Club
+3. Luxury Residential
+4. University Athletics
+
+Important requirements:
+- Each audience must have its own completely separate landing page.
+- Do NOT include top navigation links to the other audiences.
+- Do NOT include a header menu with category options.
+- Do NOT include the footer.
+- Each page must feel like a single-purpose ad landing page, not part of a multi-page navigation system.
+- Replace every “Contact Us” button with “Request a Meeting”.
+- Keep BH Labs branding and the premium wellness / biohacking visual style.
+- Optimize each page for paid ads traffic and conversions.
+- Make the message highly specific to the audience on that page.
+- Each page should be self-contained and ready to use as a standalone landing page URL.
+
+Design direction:
+- Clean luxury layout
+- Premium wellness / recovery / performance branding
+- Minimal distractions
+- Strong CTA focus
+- Preserve the visual tone of the existing BH Labs brand
+- Keep a polished, modern, conversion-first design
+
+Structure for each standalone landing page:
+1. Hero section
+   - BH Labs branding only
+   - Strong audience-specific headline
+   - Short subheadline explaining the BH Labs recovery pod / wellness solution for that audience
+   - Primary CTA button: “Request a Meeting”
+   - Optional secondary CTA can also be “Request a Meeting” or removed
+   - No navigation menu to other categories
+
+2. Audience-specific value proposition section
+   - Explain why this solution matters for that industry
+   - Use 3 to 5 benefit cards
+   - Benefits should be tailored to the audience
+
+3. Outcomes / ROI section
+   - Show audience-specific business or user outcomes
+   - Examples:
+     - revenue generation
+     - premium amenity positioning
+     - member retention
+     - athlete recovery and performance support
+     - operational simplicity
+   - Make wording relevant to each vertical
+
+4. How it works section
+   - Simple 3-step explanation
+   - Example:
+     1. Assess space and goals
+     2. Design BH Labs recovery pod solution
+     3. Launch and support
+
+5. Lead capture / meeting request form
+   - Keep the form simple and conversion-focused
+   - Include only relevant fields for the specific audience
+   - CTA button text must be “Request a Meeting”
+   - Remove any references that assume the user can switch to another sector page
+
+6. Trust / credibility section
+   - Professional proof points, premium positioning, operational simplicity
+   - Keep copy aligned with BH Labs brand tone
+
+7. Final CTA section
+   - Repeat “Request a Meeting”
+   - Strong audience-specific closing statement
+
+Content requirements:
+- Write unique messaging for each audience instead of generic copy.
+- Do not mention the other three audiences anywhere on the page.
+- Do not use tabs, nav items, or category selectors.
+- Do not use a shared site footer.
+- Do not use a global website-style experience; this should be a campaign landing page.
+
+Pages to create:
+A. Hotels & Resorts landing page
+Focus on:
+- guest wellness experience
+- premium amenity offering
+- incremental revenue
+- differentiated hospitality experience
+- turnkey implementation with minimal staffing burden
+
+B. Fitness and Sports Club landing page
+Focus on:
+- member recovery
+- retention and premium upsell opportunities
+- performance and wellness differentiation
+- modern club amenity positioning
+- low operational friction
+
+C. Luxury Residential landing page
+Focus on:
+- elevated resident amenity
+- wellness-forward property differentiation
+- premium building experience
+- developer / property value enhancement
+- exclusive resident wellness offering
+
+D. University Athletics landing page
+Focus on:
+- athlete recovery
+- performance support
+- recruiting and program differentiation
+- sports science and wellness integration
+- easy implementation for athletic departments
+
+Technical / build requirements:
+- Generate each page as a separate standalone page/component/file.
+- No shared top nav across these pages.
+- No footer.
+- Reuse BH Labs visual identity consistently.
+- Make each page mobile responsive.
+- Keep forms and CTAs prominent above the fold and throughout the page.
+- Ensure all CTA buttons say exactly: “Request a Meeting”.
+
+Deliverables:
+- 4 separate landing pages
+- One for each audience
+- Each page should be ready for direct ad traffic
+- Each page should have its own audience-specific headline, benefits, and form copy
