@@ -172,25 +172,28 @@ Standalone conversion-focused landing page for BH Labs Recovery Pod — Fitness 
 
 ### `artifacts/residential-landing` (`@workspace/residential-landing`)
 
-Standalone landing page for BH Labs Recovery Pod — Luxury Residential vertical. Designed as a single-page ad campaign destination with no navigation to other verticals.
+Standalone conversion-focused landing page for BH Labs Recovery Pod — Luxury Residential vertical. Positioned as a premium amenity strategy page for property decision-makers.
 
 - Single-page app (no router), renders residential page directly
-- Minimal sticky header: BH Labs logo + green "ROI Calculator" button + "Request a Meeting" button
+- Minimal sticky header: BH Labs logo + green "Calculate ROI" button + "Request a Meeting" button
 - No navbar links, no footer — fully standalone for paid ad traffic
-- All CTAs read "Request a Meeting"
-- Content sections: Hero → ROI Calculator → Summary bar → Value proposition (2 stat cards) → Loss aversion → Equipment grid (7 modalities) → Turnkey installation (4 steps) → Operations/maintenance → Social proof → FAQ → Contact form
-- Residential-specific contact form with:
-  - Role dropdown (Property Manager, HOA Board Member, Developer, etc.)
-  - Property Type dropdown (Condo, HOA, Mixed-Use, etc.)
-  - Current Amenities multi-select checkboxes
-  - Available Space number-only input
-  - Amenity/Wellness Fees dropdown with conditional fee amount field
-  - Decision Stage dropdown
-  - UTM parameter capture
-- ROI Calculator: sliders for units, monthly wellness fee, participation rate, operating cost
+- CTA hierarchy: "Calculate ROI" (primary) / "Request a Meeting" (secondary)
+- Section order: Hero → Why This Matters Now → ROI Calculator → Proof/Credibility → Property Value & Amenity Strategy → Equipment (by resident outcome) → Installation → Maintenance/Operations → Opportunity Cost → FAQ → Lead Form
+- Hero: trust bullets, illustrative-figures disclaimer, CTA priority flipped (calculator first)
+- ROI Calculator: participation default 70%, methodology accordion, helper text on inputs, "Potential Property Value Uplift" label (softened), gross + net monthly shown, illustrative disclaimer
+- Equipment grouped by resident outcome: Recovery & Stress Relief, Daily Wellness & Rejuvenation, Circulation & Detox Support
+- Property value section: measured tone, "measurable amenity investment" framing
+- Installation: residential-specific language, reassurance badges on each card
+- Opportunity cost: elegant stone-colored (not red fear-based), operator language (Renewals/Competition/Revenue)
+- FAQ: 11 practical buyer-focused questions (space requirements, supervision, access management, condo vs apartment vs HOA, utilities)
+- 2-step contact form with progress indicator:
+  - Step 1: contact info + property basics (name, role, units — required)
+  - Step 2: property type, management structure, decision-maker qualifier, amenity pills, charges amenity fees, decision stage, timeline dropdown, custom ROI estimate option
+  - Back button on step 2, thank-you overlay on submit
+- UTM parameter capture (sessionStorage → form payload)
 - SEO: JSON-LD (Organization, Product, FAQPage, WebPage), OG/Twitter meta, canonical URL
 - Same visual theme and branding as hotel-landing artifact
-- Messaging focus: elevated resident wellness, luxury lifestyle differentiation, property value increase, wellness-forward positioning
+- Messaging focus: premium amenity strategy, fee-based wellness revenue, luxury building differentiation, low operational burden
 
 ### `artifacts/athletics-landing` (`@workspace/athletics-landing`)
 

@@ -9,7 +9,7 @@ export function SchemaMarkup() {
     const existingCanonical = document.querySelector('link[data-dynamic]');
     existingCanonical?.remove();
 
-    const dateModified = "2026-04-02";
+    const dateModified = "2026-04-03";
 
     const organization = {
       "@context": "https://schema.org",
@@ -36,16 +36,14 @@ export function SchemaMarkup() {
         "contactType": "sales",
         "email": "info@thebiohacklab.com"
       },
-      "sameAs": [
-        "https://www.bh-labs.com"
-      ]
+      "sameAs": ["https://www.bh-labs.com"]
     };
 
     const product = {
       "@context": "https://schema.org",
       "@type": "Product",
-      "name": "BH Labs Recovery Pod",
-      "description": "Turnkey wellness pod for luxury residential buildings featuring HBOT, red light therapy, infrared sauna, lymphatic drainage suits, and PEMF devices. Generates $4,500+/month in new HOA revenue with zero additional staff.",
+      "name": "BH Labs Recovery Pod for Luxury Residential",
+      "description": "Turnkey wellness amenity for luxury residential buildings and HOA communities. Creates a new wellness fee revenue stream, supports perceived property value, and requires no dedicated staff.",
       "brand": { "@type": "Brand", "name": "BH Labs" },
       "offers": {
         "@type": "Offer",
@@ -53,7 +51,7 @@ export function SchemaMarkup() {
         "price": "45000",
         "priceValidUntil": "2026-12-31",
         "availability": "https://schema.org/InStock",
-        "description": "Complete turnkey Recovery Pod installation with 1-year warranty"
+        "description": "Complete turnkey Recovery Pod installation with 1-year warranty and staff training"
       },
       "dateModified": dateModified
     };
@@ -63,12 +61,13 @@ export function SchemaMarkup() {
       "@type": "FAQPage",
       "dateModified": dateModified,
       "mainEntity": [
-        { q: "How much revenue can a residential Recovery Pod generate?", a: "A BH Labs Recovery Pod generates approximately $4,500 per month for an HOA with 150 units at a $30/month wellness fee. That's $45,000+ in net annual revenue after payback." },
-        { q: "What is the payback period for a residential Recovery Pod?", a: "Approximately 10 months. The complete pod investment is about $45,000, paid back through monthly wellness fees." },
-        { q: "Does a Recovery Pod increase property value?", a: "Yes. According to the Global Wellness Institute's 2025 report, wellness-integrated properties see a 10-25% increase in property value." },
-        { q: "What equipment is included?", a: "Each Recovery Pod includes an HBOT chamber, red light therapy panels, infrared sauna, lymphatic drainage suits, PEMF devices, and custom architectural design — seven clinical-grade modalities total." },
-        { q: "Does the property need dedicated staff?", a: "No. The Recovery Pod includes 30+ self-guided, research-backed protocols that residents can use safely without supervision. BH Labs also provides a 1-year comprehensive warranty and technical support." },
-        { q: "How is the Recovery Pod maintained?", a: "BH Labs provides a comprehensive 1-year warranty and ongoing technical support from our Miami-based team. The pod is designed for minimal maintenance with rapid response service." }
+        { q: "How much wellness fee revenue can a Recovery Pod generate?", a: "Revenue depends on unit count, fee structure, and adoption. Illustrative example: 150 units at $30/month with 70% participation generates approximately $3,000/month net." },
+        { q: "What is the estimated payback period?", a: "Payback is illustrative and depends on fee structure and participation. Conservative modeled scenarios show 12-18 months." },
+        { q: "How much space is actually required?", a: "Most installations require 400-800 square feet. Custom layout designed for your available amenity space." },
+        { q: "Can residents use it without supervision?", a: "Yes. 30+ self-guided, research-backed protocols designed for safe, independent use." },
+        { q: "How is access managed in a shared building?", a: "Managed through existing building access — key fobs, concierge, or scheduling software." },
+        { q: "Does the property need dedicated wellness staff?", a: "No. Designed for self-guided use with existing building staff managing basic access." },
+        { q: "How long does installation take?", a: "2-4 weeks from layout approval to operational launch with minimal resident disruption." }
       ].map(f => ({
         "@type": "Question",
         "name": f.q,
@@ -81,7 +80,7 @@ export function SchemaMarkup() {
     const webPage = {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "BH Labs Recovery Pods for Luxury Residential & HOAs",
+      "name": "Luxury Residential Wellness Amenity Solution | BH Labs Recovery Pods",
       "url": pageUrl,
       "dateModified": dateModified,
       "publisher": {
@@ -112,10 +111,10 @@ export function SchemaMarkup() {
       document.head.appendChild(meta);
     };
 
-    document.title = "Recovery Pods for Luxury Residential | BH Labs — $45K Net Annual Revenue";
-    document.querySelector('meta[name="description"]')?.setAttribute("content", "Install a turnkey BH Labs Recovery Pod in your luxury residential building. Generate $4,500+/month in new HOA revenue with 10-25% property value increase. Zero additional staff.");
-    setMeta("property", "og:title", "Recovery Pods for Luxury Residential | BH Labs");
-    setMeta("property", "og:description", "Elevate your property value with a turnkey Recovery Pod. $4,500+/month in new HOA revenue with zero additional staff.");
+    document.title = "Luxury Residential Wellness Amenity Solution | BH Labs Recovery Pods";
+    document.querySelector('meta[name="description"]')?.setAttribute("content", "Create a new wellness fee revenue stream for your luxury residential building. BH Labs installs turnkey Recovery Pods — a premium amenity that supports perceived property value with no dedicated staff required.");
+    setMeta("property", "og:title", "Luxury Residential Wellness Amenity | BH Labs Recovery Pods");
+    setMeta("property", "og:description", "Create a new wellness fee revenue stream. Turnkey Recovery Pod installation for luxury residential buildings and HOA communities.");
     setMeta("property", "og:url", pageUrl);
     setMeta("property", "og:image", "https://www.bh-labs.com/opengraph.jpg");
     setMeta("property", "og:image:width", "1200");

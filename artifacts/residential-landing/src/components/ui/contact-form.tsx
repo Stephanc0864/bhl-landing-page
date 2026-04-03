@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { motion } from "framer-motion";
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import { CheckCircle2, ArrowRight, ArrowLeft } from "lucide-react";
 
 const req = (msg: string) => z.string().min(1, msg);
 
@@ -17,15 +17,18 @@ const residentialSchema = z.object({
   email: z.string().email("Invalid email address"),
   phone: z.string().min(10, "Phone number is required"),
   property: req("Property name is required"),
-  role: req("Role/Title is required"),
-  propertyType: req("Property type is required"),
+  role: req("Role is required"),
   numberOfUnits: req("Number of units is required"),
-  currentAmenities: req("Please select at least one option"),
-  availableSpace: req("Available space is required"),
-  wellnessFees: req("This field is required"),
-  amenityFeeAmount: z.string().optional(),
-  decisionStage: req("Decision stage is required"),
-  timeline: req("Timeline is required"),
+  isDecisionMaker: z.string().optional(),
+  propertyType: z.string().optional(),
+  managementType: z.string().optional(),
+  currentAmenities: z.string().optional(),
+  availableSpace: z.string().optional(),
+  chargesAmenityFees: z.string().optional(),
+  currentFeeAmount: z.string().optional(),
+  decisionStage: z.string().optional(),
+  timeline: z.string().optional(),
+  customEstimate: z.string().optional(),
 });
 
 function getUTMParams(): Record<string, string> {
@@ -55,19 +58,33 @@ function SelectField({ value, onChange, options, placeholder, disabled }: { valu
   );
 }
 
-function MultiCheckboxField({ value, onChange, options }: { value: string; onChange: (v: string) => void; options: string[] }) {
+function PillSelectField({ value, onChange, options }: { value: string; onChange: (v: string) => void; options: string[] }) {
   const selected = value ? value.split(", ").filter(Boolean) : [];
   const toggle = (opt: string) => {
-    const next = selected.includes(opt) ? selected.filter(s => s !== opt) : [...selected, opt];
+    let next: string[];
+    if (opt === "None") {
+      next = selected.includes("None") ? [] : ["None"];
+    } else {
+      const withoutNone = selected.filter(s => s !== "None");
+      next = withoutNone.includes(opt) ? withoutNone.filter(s => s !== opt) : [...withoutNone, opt];
+    }
     onChange(next.join(", "));
   };
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+    <div className="flex flex-wrap gap-2">
       {options.map((opt) => (
-        <label key={opt} className="flex items-center gap-2 text-sm cursor-pointer select-none">
-          <input type="checkbox" checked={selected.includes(opt)} onChange={() => toggle(opt)} className="rounded border-input accent-primary w-4 h-4" />
+        <button
+          key={opt}
+          type="button"
+          onClick={() => toggle(opt)}
+          className={`px-3 py-1.5 rounded-full text-sm font-medium border transition-colors ${
+            selected.includes(opt)
+              ? "bg-primary text-primary-foreground border-primary"
+              : "bg-background text-muted-foreground border-border hover:border-primary/50"
+          }`}
+        >
           {opt}
-        </label>
+        </button>
       ))}
     </div>
   );
@@ -82,6 +99,7 @@ export function ContactForm({ title, subtitle }: ContactFormProps) {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [step, setStep] = useState(1);
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -96,12 +114,18 @@ export function ContactForm({ title, subtitle }: ContactFormProps) {
     resolver: zodResolver(residentialSchema),
     defaultValues: {
       firstName: "", lastName: "", email: "", phone: "", property: "", role: "",
-      propertyType: "", numberOfUnits: "", currentAmenities: "", availableSpace: "",
-      wellnessFees: "", amenityFeeAmount: "", decisionStage: "", timeline: ""
+      numberOfUnits: "", isDecisionMaker: "",
+      propertyType: "", managementType: "", currentAmenities: "", availableSpace: "",
+      chargesAmenityFees: "", currentFeeAmount: "", decisionStage: "", timeline: "", customEstimate: ""
     },
   });
 
-  const wellnessFeesValue = form.watch("wellnessFees");
+  const chargesFeesValue = form.watch("chargesAmenityFees");
+
+  const validateStep1 = async () => {
+    const result = await form.trigger(["firstName", "lastName", "email", "phone", "property", "role", "numberOfUnits"]);
+    if (result) setStep(2);
+  };
 
   const onSubmit = (data: Record<string, unknown>) => {
     setIsSubmitting(true);
@@ -129,19 +153,17 @@ export function ContactForm({ title, subtitle }: ContactFormProps) {
         <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
           <CheckCircle2 className="w-10 h-10 text-emerald-600" />
         </div>
-        <h3 className="text-2xl md:text-3xl font-serif font-medium mb-3 text-foreground">
-          Thank You!
-        </h3>
+        <h3 className="text-2xl md:text-3xl font-serif font-medium mb-3 text-foreground">Thank You!</h3>
         <p className="text-muted-foreground text-lg mb-6 max-w-md mx-auto">
-          Your request has been received. A BH Labs representative will contact you within 24 hours with your custom property assessment.
+          Your request has been received. A BH Labs representative will contact you within 24 hours to discuss your property's wellness amenity potential.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <Button variant="outline" onClick={() => { setIsSubmitted(false); form.reset(); }}>
+          <Button variant="outline" onClick={() => { setIsSubmitted(false); setStep(1); form.reset(); }}>
             Submit Another Request
           </Button>
           <Button asChild>
             <a href="#calculator">
-              Try the ROI Calculator
+              Recalculate ROI
               <ArrowRight className="ml-2 w-4 h-4" />
             </a>
           </Button>
@@ -152,154 +174,215 @@ export function ContactForm({ title, subtitle }: ContactFormProps) {
 
   return (
     <div className="bg-card rounded-2xl p-5 md:p-8 lg:p-10 shadow-xl border border-border" id="contact">
-      <div className="mb-8">
+      <div className="mb-6">
         <h3 className="text-2xl md:text-3xl font-serif font-medium mb-2 text-foreground">
-          {title || "Increase Your Property Value NOW"}
+          {title || "Request a Meeting"}
         </h3>
         <p className="text-muted-foreground">
-          {subtitle || "Request a comprehensive property assessment and ROI analysis from BH Labs."}
+          {subtitle || "Tell us about your property and we'll prepare a tailored wellness amenity assessment."}
         </p>
+      </div>
+
+      <div className="flex items-center gap-3 mb-8">
+        <div className={`flex items-center justify-center w-8 h-8 rounded-full text-sm font-bold ${step >= 1 ? "bg-emerald-600 text-white" : "bg-muted text-muted-foreground"}`}>1</div>
+        <div className={`flex-1 h-1 rounded-full ${step >= 2 ? "bg-emerald-600" : "bg-muted"}`} />
+        <div className={`flex items-center justify-center w-8 h-8 rounded-full text-sm font-bold ${step >= 2 ? "bg-emerald-600 text-white" : "bg-muted text-muted-foreground"}`}>2</div>
       </div>
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <FormField control={form.control} name="firstName" render={({ field }) => (
-              <FormItem>
-                <FormLabel>First Name *</FormLabel>
-                <FormControl><Input placeholder="John" {...field} /></FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <FormField control={form.control} name="lastName" render={({ field }) => (
-              <FormItem>
-                <FormLabel>Last Name *</FormLabel>
-                <FormControl><Input placeholder="Doe" {...field} /></FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-          </div>
+          {step === 1 && (
+            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="space-y-6">
+              <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Contact Info & Property Basics</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <FormField control={form.control} name="email" render={({ field }) => (
-              <FormItem>
-                <FormLabel>Work Email *</FormLabel>
-                <FormControl><Input type="email" placeholder="john@company.com" {...field} /></FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <FormField control={form.control} name="phone" render={({ field }) => (
-              <FormItem>
-                <FormLabel>Phone Number *</FormLabel>
-                <FormControl><Input type="tel" placeholder="(555) 000-0000" {...field} /></FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-          </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <FormField control={form.control} name="firstName" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>First Name *</FormLabel>
+                    <FormControl><Input placeholder="John" {...field} /></FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )} />
+                <FormField control={form.control} name="lastName" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Last Name *</FormLabel>
+                    <FormControl><Input placeholder="Doe" {...field} /></FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )} />
+              </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <FormField control={form.control} name="property" render={({ field }) => (
-              <FormItem>
-                <FormLabel>Property/Building Name *</FormLabel>
-                <FormControl><Input placeholder="The Grand Residences" {...field} /></FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <FormField control={form.control} name="role" render={({ field }) => (
-              <FormItem>
-                <FormLabel>Role/Title *</FormLabel>
-                <FormControl>
-                  <SelectField value={field.value} onChange={field.onChange} options={["Property Manager", "HOA Board Member", "HOA President", "Building Manager", "Developer", "Owner", "Asset Manager", "Other"]} placeholder="Select role..." />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-          </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <FormField control={form.control} name="email" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Work Email *</FormLabel>
+                    <FormControl><Input type="email" placeholder="john@company.com" {...field} /></FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )} />
+                <FormField control={form.control} name="phone" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Phone Number *</FormLabel>
+                    <FormControl><Input type="tel" placeholder="(555) 000-0000" {...field} /></FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )} />
+              </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <FormField control={form.control} name="propertyType" render={({ field }) => (
-              <FormItem>
-                <FormLabel>Type of Property *</FormLabel>
-                <FormControl>
-                  <SelectField value={field.value} onChange={field.onChange} options={["Condo", "HOA", "Mixed-Use", "Co-op", "Luxury Apartment", "Other"]} placeholder="Select property type..." />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <FormField control={form.control} name="numberOfUnits" render={({ field }) => (
-              <FormItem>
-                <FormLabel>Number of Units *</FormLabel>
-                <FormControl><Input type="number" placeholder="150" {...field} /></FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-          </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <FormField control={form.control} name="property" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Property / Building Name *</FormLabel>
+                    <FormControl><Input placeholder="The Grand Residences" {...field} /></FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )} />
+                <FormField control={form.control} name="role" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Your Role *</FormLabel>
+                    <FormControl>
+                      <SelectField value={field.value} onChange={field.onChange} options={["Property Manager", "HOA Board Member", "HOA President", "Building Manager", "Developer", "Owner", "Asset Manager", "Other"]} placeholder="Select role..." />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )} />
+              </div>
 
-          <FormField control={form.control} name="currentAmenities" render={({ field }) => (
-            <FormItem>
-              <FormLabel>Current Amenities *</FormLabel>
-              <FormControl>
-                <MultiCheckboxField value={field.value} onChange={field.onChange} options={["Pool", "Gym", "Clubhouse", "Spa", "Tennis Courts", "Concierge", "Business Center", "None"]} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )} />
+              <FormField control={form.control} name="numberOfUnits" render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Number of Units *</FormLabel>
+                  <FormControl><Input type="number" placeholder="150" {...field} /></FormControl>
+                  <FormMessage />
+                </FormItem>
+              )} />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <FormField control={form.control} name="availableSpace" render={({ field }) => (
-              <FormItem>
-                <FormLabel>Available Space (sq ft) *</FormLabel>
-                <FormControl><Input type="number" placeholder="500" {...field} min={0} /></FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <FormField control={form.control} name="wellnessFees" render={({ field }) => (
-              <FormItem>
-                <FormLabel>Amenity/Wellness Fees Currently? *</FormLabel>
-                <FormControl>
-                  <SelectField value={field.value} onChange={field.onChange} options={["Yes", "No"]} placeholder="Select..." />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-          </div>
-
-          {wellnessFeesValue === "Yes" && (
-            <FormField control={form.control} name="amenityFeeAmount" render={({ field }) => (
-              <FormItem>
-                <FormLabel>Amenity Fee Amount</FormLabel>
-                <FormControl><Input placeholder="$50/mo" {...field} /></FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
+              <Button type="button" onClick={validateStep1} className="w-full h-12 text-base font-medium">
+                Continue
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </motion.div>
           )}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <FormField control={form.control} name="decisionStage" render={({ field }) => (
-              <FormItem>
-                <FormLabel>Decision Stage *</FormLabel>
-                <FormControl>
-                  <SelectField value={field.value} onChange={field.onChange} options={["Just Exploring", "Actively Researching", "Comparing Options", "Ready to Move Forward"]} placeholder="Select stage..." />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <FormField control={form.control} name="timeline" render={({ field }) => (
-              <FormItem>
-                <FormLabel>Timeline *</FormLabel>
-                <FormControl><Input placeholder="Q2 2026" {...field} /></FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-          </div>
+          {step === 2 && (
+            <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="space-y-6">
+              <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Property Details & Goals</p>
 
-          <Button
-            type="submit"
-            className="w-full h-12 text-base font-medium"
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? "Submitting..." : "Request a Meeting"}
-          </Button>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <FormField control={form.control} name="propertyType" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Property Type</FormLabel>
+                    <FormControl>
+                      <SelectField value={field.value || ""} onChange={field.onChange} options={["Condo", "Luxury Apartment", "HOA Community", "Multifamily", "Mixed-Use Residential", "Co-op", "Other"]} placeholder="Select type..." />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )} />
+                <FormField control={form.control} name="managementType" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Management Structure</FormLabel>
+                    <FormControl>
+                      <SelectField value={field.value || ""} onChange={field.onChange} options={["Management Company", "Developer", "HOA Board", "Ownership Group", "Self-Managed", "Other"]} placeholder="Select..." />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )} />
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <FormField control={form.control} name="isDecisionMaker" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Are you the decision-maker?</FormLabel>
+                    <FormControl>
+                      <SelectField value={field.value || ""} onChange={field.onChange} options={["Yes — I can approve this", "I influence the decision", "I'm researching for someone else"]} placeholder="Select..." />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )} />
+                <FormField control={form.control} name="availableSpace" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Available Amenity Space (sq ft)</FormLabel>
+                    <FormControl><Input type="number" placeholder="500" {...field} min={0} /></FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )} />
+              </div>
+
+              <FormField control={form.control} name="currentAmenities" render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Current Amenities</FormLabel>
+                  <FormControl>
+                    <PillSelectField value={field.value || ""} onChange={field.onChange} options={["Pool", "Gym", "Clubhouse", "Spa", "Tennis Courts", "Concierge", "Business Center", "None"]} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )} />
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <FormField control={form.control} name="chargesAmenityFees" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Do you already charge amenity fees?</FormLabel>
+                    <FormControl>
+                      <SelectField value={field.value || ""} onChange={field.onChange} options={["Yes", "No", "Included in HOA dues"]} placeholder="Select..." />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )} />
+                {chargesFeesValue === "Yes" && (
+                  <FormField control={form.control} name="currentFeeAmount" render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Current Fee Amount</FormLabel>
+                      <FormControl><Input placeholder="$50/mo" {...field} /></FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )} />
+                )}
+                <FormField control={form.control} name="decisionStage" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Where are you in the process?</FormLabel>
+                    <FormControl>
+                      <SelectField value={field.value || ""} onChange={field.onChange} options={["Just exploring", "Actively researching", "Comparing options", "Ready to move forward"]} placeholder="Select stage..." />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )} />
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <FormField control={form.control} name="timeline" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Target Timeline</FormLabel>
+                    <FormControl>
+                      <SelectField value={field.value || ""} onChange={field.onChange} options={["0-3 months", "3-6 months", "6-12 months", "Planning stage"]} placeholder="Select timeline..." />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )} />
+                <FormField control={form.control} name="customEstimate" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Would you like a custom ROI estimate?</FormLabel>
+                    <FormControl>
+                      <SelectField value={field.value || ""} onChange={field.onChange} options={["Yes — send me a custom estimate", "No — just a meeting"]} placeholder="Select..." />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )} />
+              </div>
+
+              <div className="flex gap-3">
+                <Button type="button" variant="outline" onClick={() => setStep(1)} className="h-12 px-6">
+                  <ArrowLeft className="mr-2 w-4 h-4" />
+                  Back
+                </Button>
+                <Button
+                  type="submit"
+                  className="flex-1 h-12 text-base font-medium"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Submitting..." : "Request a Meeting"}
+                </Button>
+              </div>
+            </motion.div>
+          )}
         </form>
       </Form>
     </div>

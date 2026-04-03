@@ -1,0 +1,359 @@
+You are a senior conversion-focused UI engineer and copy strategist.
+
+I need you to revise into a higher-converting B2B/B2B2C page for:
+- luxury residential developers
+- condo and HOA decision-makers
+- multifamily operators
+- property managers
+- ownership groups
+
+Goal:
+Turn this page from a premium wellness/equipment pitch into a premium residential amenity strategy page focused on:
+- creating a new wellness fee revenue stream
+- increasing perceived property value
+- improving building differentiation
+- supporting resident satisfaction and retention
+- minimizing operational burden
+- building stronger credibility around ROI claims
+
+Important:
+- Keep the overall luxury residential visual style
+- Do not rebuild from scratch unless necessary
+- Improve copy, hierarchy, proof placement, CTA strategy, calculator trust, section framing, FAQ quality, and form UX
+- Preserve responsiveness and performance
+- Keep code clean and production-ready
+- Do not add fake testimonials, fake logos, fake stats, or fake case studies
+- If real proof assets are missing, create polished placeholder components clearly labeled for future replacement
+- Keep the tone sophisticated, financially credible, and operator-focused
+- Make the page feel like a premium residential amenity investment, not a biohacking equipment page
+
+Primary conversion objective:
+- Get qualified residential / HOA strategy calls
+Secondary conversion objective:
+- Drive calculator engagement and estimate submissions
+
+Core positioning shift:
+This page should lead with:
+- premium amenity strategy
+- fee-based wellness revenue
+- luxury building differentiation
+- resident experience
+- low operational burden
+- turnkey implementation
+
+The equipment should support that story, not lead it.
+
+Make these changes:
+
+1) HERO SECTION
+The current hero direction is strong, but the subheadline needs to sound more concrete and financial.
+
+Use this direction for the subheadline:
+“Install a turnkey BH Labs Recovery Pod that creates a new wellness fee revenue stream, increases perceived property value, and helps your building stand out—without requiring dedicated staff.”
+
+CTA priority:
+- Primary CTA: “Calculate ROI”
+- Secondary CTA: “Request a Meeting”
+
+Flip the current emphasis if needed so the calculator is clearly primary.
+
+Under the CTAs, add 3 trust bullets in this style:
+- Turnkey install + resident-ready setup
+- New fee-based wellness amenity revenue
+- No dedicated staff required
+
+If financial claims appear in the hero, add a small credibility note nearby:
+“Illustrative figures based on unit count, fee structure, participation assumptions, and operating costs.”
+
+2) STANDARDIZE CTA HIERARCHY
+Reduce CTA confusion throughout the page.
+
+Use only:
+- Primary CTA: “Calculate ROI”
+- Secondary CTA: “Request a Meeting”
+
+Apply this consistently across hero, calculator, proof blocks, and form transitions.
+
+3) MAKE THE PAGE FEEL MORE LIKE A RESIDENTIAL AMENITY STRATEGY
+Shift copy away from product-led / biohacking-led messaging and toward:
+- premium amenity differentiation
+- resident experience
+- fee-based wellness revenue
+- luxury positioning
+- low operational burden
+- modern building appeal
+
+Every major section should answer:
+- How does this help the property compete?
+- How does this generate revenue?
+- How does this improve perceived value?
+- How difficult is it to operate?
+- Why is BH Labs credible?
+
+4) IMPROVE PAGE FLOW
+Reorder the page into this conversion sequence:
+
+1. Hero
+2. Why this matters for residential properties
+3. ROI calculator
+4. “How ROI is calculated” / assumptions
+5. Proof / case study / credibility
+6. Property value / amenity strategy section
+7. Equipment / amenity experience section
+8. Installation process
+9. Maintenance / operations reassurance
+10. FAQ
+11. Lead form
+
+Move trust/proof earlier than deep equipment detail.
+
+5) CALCULATOR: MAKE IT MORE BELIEVABLE
+This is one of the strongest parts of the page, but also the easiest place to lose trust.
+
+Required calculator changes:
+- Add a “How ROI is calculated” expandable note or accordion
+- Add assumption helper text for:
+  - participation/adoption
+  - wellness fee assumptions
+  - operating cost assumptions
+- Add a disclaimer below outputs:
+  “Illustrative estimate based on unit count, fee structure, participation assumptions, and operating cost. Final performance depends on your property, pricing model, resident adoption, and amenity strategy.”
+- Add a lead capture CTA below results:
+  “Send me my estimate”
+
+Important:
+- Reduce default participation/adoption assumptions to a more conservative level unless there is strong supporting evidence
+- If “95% participation” exists as a default, lower it or clearly label it as an editable assumption
+- Keep main outputs focused on:
+  - estimated annual wellness fee revenue
+  - estimated net annual revenue
+  - estimated payback period
+- If “Estimated Property Value Increase” is included, make it clearly secondary and caveated, or soften it to:
+  “Potential property value uplift”
+- Remove or soften any output that feels too speculative or unsupported
+
+6) SOFTEN OVERCONFIDENT CLAIMS
+Claims like “pays for itself,” “10–25% increase in property value,” or large annual revenue numbers should not sound absolute unless heavily supported.
+
+Across the page:
+- add “illustrative estimate” language where needed
+- tie claims to assumptions
+- avoid absolute certainty
+- use phrases like:
+  - “potential property value uplift”
+  - “modeled revenue potential”
+  - “illustrative payback scenario”
+  - “based on sample assumptions”
+
+7) IMPROVE THE PROPERTY VALUE SECTION
+If the page includes a section like “How does a Recovery Pod increase property value?”, keep it, because it aligns with buyer motivation.
+
+But make the tone more measured and professional.
+For example, replace defensive language like:
+“That’s not a soft claim — it’s a measurable return backed by industry data.”
+with a more credible line like:
+“This positions wellness as a measurable amenity investment, not just a lifestyle upgrade.”
+
+Frame the section around:
+- amenity differentiation
+- premium positioning
+- perceived value
+- resident satisfaction
+- competitive appeal at renewal / resale / leasing
+
+8) REFRAME THE “COST OF NOT OFFERING PREMIUM WELLNESS” SECTION
+Keep the concept, but remove vague drama.
+
+If there is a card or stat like “Every Day,” replace it with more concrete operator language such as:
+- Resident comparison happens at renewal
+- Competing properties are upgrading amenities
+- Missed differentiation in a crowded market
+
+Rename the section if needed to:
+“What is the opportunity cost of not offering a premium wellness amenity?”
+
+Use polished, advisory language instead of alarmist urgency.
+
+9) EQUIPMENT SECTION: FRAME IT AS A RESIDENT EXPERIENCE
+The equipment section should not read like a product catalog.
+
+Add an intro line in this direction:
+“A complete wellness amenity designed to increase perceived value, resident satisfaction, and modern luxury appeal.”
+
+Group the equipment or modalities by resident-facing outcomes such as:
+- Recovery & Stress Relief
+- Daily Wellness & Rejuvenation
+- Premium Lifestyle Amenity Experience
+
+For each group, explain:
+- what resident need it serves
+- how it supports luxury building appeal
+- how it reinforces amenity differentiation
+
+Keep device-specific detail secondary.
+
+10) INSTALLATION SECTION: MAKE IT MORE RESIDENTIAL-SPECIFIC
+The installation section is strong, but make every step more tailored to residential buyers.
+
+Revise step copy to include ideas like:
+- optimized for available amenity space
+- minimal disruption to residents
+- building staff onboarding
+- support for ongoing resident use
+
+Keep the step flow clear:
+- design
+- install
+- training
+- support
+
+11) MAINTENANCE / OPERATIONS SECTION
+This is a key trust-builder and should stay strong.
+
+Make sure it clearly communicates:
+- low maintenance
+- no dedicated staff required
+- guided resident use
+- warranty/support
+- simple building operations fit
+
+If there is a testimonial in this section, improve credibility by adding:
+- full name if approved
+- role/title
+- property/building type
+- a short result or outcome
+
+Do not invent details. Use placeholders if real attribution is unavailable.
+
+12) STRENGTHEN SOCIAL PROOF FOR THIS SPECIFIC BUYER
+The proof section should look more residential-specific and institutional.
+
+Add or improve components for:
+- condo / residential / HOA client examples
+- developer or property manager quotes
+- before/after amenity photos
+- install snapshots
+- resident adoption or usage data if available
+- one mini case study
+
+If real assets are missing, create polished placeholders clearly labeled:
+- “Residential logo placeholder”
+- “Install photo placeholder”
+- “Case study placeholder — add property type, unit count, amenity footprint, fee model, payback period, and operator quote”
+
+13) ADD ONE REAL CASE STUDY BLOCK
+This is a priority.
+
+Create a case study section with a structure like:
+- Property type
+- Number of units
+- Installed amenity footprint
+- Fee model
+- Payback period
+- Quote from operator / manager
+
+If real data is unavailable, create a clean placeholder card with those fields labeled for future completion.
+
+14) FAQ: EXPAND PRACTICAL BUYER QUESTIONS
+The FAQ is already directionally aligned, but add these practical questions:
+- How much space is actually required?
+- Can residents use it without supervision?
+- How is access managed in a shared building?
+- Is this best for condos, apartments, or HOAs?
+- What utility or maintenance requirements should we plan for?
+
+Make answers operational, concise, and buyer-oriented.
+
+15) FORM: KEEP IT STRONG, BUT TIGHTEN QUALIFICATION
+The form is already relatively strong. Improve it further.
+
+Recommended fields:
+- Property / building name
+- Role / title
+- Are you the decision-maker?
+- Property type: Condo / Luxury apartment / HOA / Multifamily / Mixed-use residential
+- Management company / developer / HOA board / ownership group
+- Unit count
+- Current amenities
+- Available space
+- Do you already charge amenity fees? Yes/No
+- Current wellness fees (only if applicable)
+- Decision stage
+- Timeline
+- Would you like a custom ROI estimate? Yes/No
+
+Specific improvements:
+- Turn “current amenities” into cleaner multi-select pills/buttons instead of plain checkboxes
+- Make Timeline a dropdown such as:
+  - 0–3 months
+  - 3–6 months
+  - 6–12 months
+  - Planning stage
+
+16) REDUCE FORM FRICTION
+If appropriate, convert the form into a 2-step experience.
+
+Step 1:
+- contact info
+- property basics
+
+Step 2:
+- qualification details
+
+Also add:
+- progress indicator
+- clean validation
+- calculator values prefilled into the form if available
+- mobile-friendly layout
+- accessible labels and field states
+
+17) DESIGN / UX REQUIREMENTS
+Maintain a luxury residential feel:
+- editorial, premium, polished
+- generous spacing
+- better scannability
+- proof visible earlier
+- subtle animation only
+- no clutter
+- no overly “techy” biohacking tone
+
+18) COPY STYLE
+Use copy that feels:
+- sophisticated
+- financially grounded
+- developer / HOA aware
+- premium
+- credible
+- concise
+
+Avoid:
+- modality-first jargon
+- catalog language
+- hypey certainty
+- weakly supported financial bravado
+
+19) IMPLEMENTATION NOTES
+Please:
+- inspect the existing page structure and update current components where possible
+- refactor repeated CTA labels into reusable constants/components if appropriate
+- keep state stable for calculator + form
+- preserve responsiveness
+- keep the page deployable
+- add comments only where useful
+
+20) DELIVERABLES
+Provide:
+1. Updated page implementation
+2. Any new reusable components
+3. Short summary of what changed
+4. List of placeholders that still need real business assets/data
+5. Any claims that should be legally/commercially verified before publishing
+
+Success criteria:
+- The page feels like a premium residential amenity investment page
+- Calculator is the primary CTA and feels believable
+- Proof appears earlier
+- Claims feel more credible and caveated
+- The experience feels less like biohacking equipment and more like premium amenity strategy
+- The form qualifies serious residential buyers better
+- The page feels more conversion-oriented for condo / HOA / multifamily decision-makers
