@@ -6,8 +6,9 @@ import { SchemaMarkup } from "@/components/seo/schema-markup";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { 
-  Activity, ArrowRight, CheckCircle2, ChevronDown,
-  Hotel, Plus, TrendingUp, Users, Zap, DollarSign
+  ArrowRight, CheckCircle2, ChevronDown,
+  Hotel, TrendingUp, Users, Zap, DollarSign,
+  Sparkles, Heart, Droplets, Camera
 } from "lucide-react";
 import heroImage from "@/assets/images/biohack-lab-front.jpg";
 import hbotImage from "@/assets/images/hbot-chamber.jpg";
@@ -17,7 +18,6 @@ import compressionImage from "@/assets/images/compression-boots.jpg";
 import pemfImage from "@/assets/images/pemf-device.jpg";
 import pemfTreatmentImage from "@/assets/images/pemf-treatment.jpg";
 import lymphaticImage from "@/assets/images/lymphatic-drainage.jpg";
-import roiWellnessImage from "@/assets/images/roi-wellness.png";
 import logoDark from "@/assets/images/logo-dark.png";
 import logoLight from "@/assets/images/logo-light.png";
 import turnkeyDesignImage from "@/assets/images/turnkey-design.png";
@@ -42,6 +42,7 @@ export default function Hotels() {
       <Header />
 
       <main className="flex-grow pt-20">
+        {/* HERO */}
         <section className="relative min-h-[70vh] md:min-h-[90vh] flex items-center">
           <div className="absolute inset-0 z-0">
             <img 
@@ -66,30 +67,52 @@ export default function Hotels() {
               </motion.div>
               <motion.div variants={FADE_UP} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/50 text-secondary-foreground text-sm font-medium mb-6">
                 <Hotel className="w-4 h-4" />
-                <span>For Hospitality & Resorts</span>
+                <span>For Hotels & Resorts</span>
               </motion.div>
               
               <motion.h1 variants={FADE_UP} className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-serif tracking-tight text-foreground mb-4 md:mb-6 leading-[1.1]">
-                Turn Idle Space Into <span className="text-primary italic">Wellness Revenue</span>
+                Turn Underused Hotel Space Into a New <span className="text-primary italic">$25K+/Month Revenue Stream</span>
               </motion.h1>
               
-              <motion.p variants={FADE_UP} className="text-base md:text-lg lg:text-xl text-muted-foreground mb-6 md:mb-10 max-w-2xl leading-relaxed">
-                Install a turnkey BH Labs Recovery Pod in your hotel. Generate <span className="text-primary font-bold text-xl md:text-2xl lg:text-3xl">$25K+ monthly revenue</span> with zero additional staff. Clinical biohacking meets luxury hospitality.
+              <motion.p variants={FADE_UP} className="text-base md:text-lg lg:text-xl text-muted-foreground mb-6 md:mb-8 max-w-2xl leading-relaxed">
+                BH Labs designs and installs turnkey Recovery Pods for hotels and resorts — without requiring additional headcount.
               </motion.p>
               
-              <motion.div variants={FADE_UP}>
+              <motion.div variants={FADE_UP} className="flex flex-col sm:flex-row gap-3 mb-6">
                 <Button size="lg" className="h-14 px-8 text-base" asChild data-testid="btn-hero-cta">
-                  <a href="#contact">
-                    Request a Meeting
+                  <a href="#calculator">
+                    Calculate My Revenue Potential
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </a>
                 </Button>
+                <Button size="lg" variant="outline" className="h-14 px-8 text-base" asChild>
+                  <a href="#contact">
+                    Book a Strategy Call
+                  </a>
+                </Button>
               </motion.div>
+
+              <motion.div variants={FADE_UP} className="space-y-2">
+                {[
+                  "Turnkey install + staff training included",
+                  "Typical payback in under 2 months",
+                  "Trusted across 5 Miami wellness locations"
+                ].map((bullet, i) => (
+                  <div key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                    <span>{bullet}</span>
+                  </div>
+                ))}
+              </motion.div>
+
+              <motion.p variants={FADE_UP} className="text-xs text-muted-foreground/60 mt-4 italic">
+                Illustrative figures based on property size, occupancy, utilization, and pricing assumptions.
+              </motion.p>
             </motion.div>
           </div>
 
           <motion.a
-            href="#calculator"
+            href="#why-now"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5 }}
@@ -105,223 +128,51 @@ export default function Hotels() {
           </motion.a>
         </section>
 
-        <ROICalculator />
-
-        <section className="py-8 bg-secondary/30 border-b border-border">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <p className="text-base md:text-lg text-foreground max-w-4xl mx-auto text-center leading-relaxed">
-              <strong>BH Labs installs turnkey Recovery Pods</strong> — HBOT, red light therapy, infrared sauna, PEMF, and lymphatic drainage — in hotels and resorts. A complete pod costs approximately <strong>$45,000</strong>, generates <strong>$25,000+/month</strong> in new wellness revenue, and pays for itself in <strong>under 2 months</strong>. No additional staff required. Based in Miami, FL.
-            </p>
-          </div>
-        </section>
-
-        <section className="py-12 md:py-24 bg-background" id="roi">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
-              <div>
-                <motion.div 
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, margin: "-100px" }}
-                  variants={FADE_UP}
-                  className="mb-8 md:mb-12"
-                >
-                  <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-4">How does the hotel wellness revenue model work?</h2>
-                  <p className="text-muted-foreground text-lg">Two revenue streams from a single installation — ADR surcharges plus walk-in sessions. According to the <strong className="text-foreground">Global Wellness Institute (2024)</strong>, wellness tourism will exceed $1 trillion globally, making now the time to capture this market.</p>
-                </motion.div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  {[
-                    {
-                      title: "ADR Revenue",
-                      value: "$21,000/mo",
-                      subtext: "200 rooms × 70% occupancy × $5/night wellness surcharge",
-                      icon: TrendingUp
-                    },
-                    {
-                      title: "A-La-Carte Sessions",
-                      value: "$6,000/mo",
-                      subtext: "~10 walk-in sessions/day at $20/session average",
-                      icon: DollarSign
-                    },
-                    {
-                      title: "Payback Period",
-                      value: "< 2 Months",
-                      subtext: "On a ~$45,000 pod investment with combined revenue streams",
-                      icon: Zap
-                    },
-                    {
-                      title: "Additional Staff",
-                      value: "Zero",
-                      subtext: "We train and certify your existing spa staff to run the pod",
-                      icon: Users
-                    }
-                  ].map((stat, i) => (
-                    <motion.div 
-                      key={i}
-                      initial="hidden"
-                      whileInView="visible"
-                      viewport={{ once: true, margin: "-50px" }}
-                      variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.5 } } }}
-                      className="bg-card rounded-2xl p-6 border border-border shadow-sm hover:shadow-md transition-shadow"
-                    >
-                      <div className="w-10 h-10 bg-secondary rounded-xl flex items-center justify-center mb-4">
-                        <stat.icon className="w-5 h-5 text-primary" />
-                      </div>
-                      <h3 className="text-muted-foreground text-xs font-medium uppercase tracking-wider mb-1">{stat.title}</h3>
-                      <div className="text-3xl font-serif text-foreground mb-2">{stat.value}</div>
-                      <p className="text-muted-foreground text-sm leading-relaxed">{stat.subtext}</p>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-
-              <motion.div 
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="relative"
-              >
-                <img 
-                  src={roiWellnessImage} 
-                  alt="Premium hotel wellness center with recovery equipment" 
-                  className="rounded-2xl shadow-xl w-full object-cover aspect-[3/4]"
-                  loading="lazy"
-                  width={600}
-                  height={800}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent rounded-2xl flex items-end p-8">
-                  <div className="text-primary-foreground">
-                    <div className="text-sm font-medium uppercase tracking-wider mb-2 opacity-80">Combined Annual Revenue</div>
-                    <div className="text-3xl md:text-5xl font-sans font-bold tracking-tighter text-secondary">+$324,000</div>
-                    <div className="text-sm mt-2 opacity-80">ADR surcharge + a-la-carte sessions</div>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-16 bg-red-50 border-y border-red-200">
+        {/* WHY THIS MATTERS NOW */}
+        <section className="py-12 md:py-24 bg-background" id="why-now">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={FADE_UP}
-              className="max-w-4xl mx-auto text-center"
+              className="max-w-3xl mx-auto text-center mb-8 md:mb-12"
             >
-              <h2 className="text-2xl md:text-3xl font-serif text-foreground mb-6">What's the cost of <span className="text-red-600 italic">not</span> installing a Recovery Pod?</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-white rounded-xl p-6 border border-red-200 shadow-sm">
-                  <div className="text-3xl font-serif text-red-600 mb-2">$324K</div>
-                  <p className="text-sm text-muted-foreground">Annual revenue left on the table from unused or underperforming space</p>
-                </div>
-                <div className="bg-white rounded-xl p-6 border border-red-200 shadow-sm">
-                  <div className="text-3xl font-serif text-red-600 mb-2">41-175%</div>
-                  <p className="text-sm text-muted-foreground">Higher spending from wellness tourists you're not attracting — <em>Global Wellness Institute</em></p>
-                </div>
-                <div className="bg-white rounded-xl p-6 border border-red-200 shadow-sm">
-                  <div className="text-3xl font-serif text-red-600 mb-2">0 Days</div>
-                  <p className="text-sm text-muted-foreground">Every day without a wellness offering is a day your competitors gain ground</p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        <section className="py-12 md:py-24 bg-background" id="equipment">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={FADE_UP}
-              className="text-center max-w-3xl mx-auto mb-8 md:mb-16"
-            >
-              <h2 className="text-2xl md:text-3xl lg:text-5xl font-serif text-foreground mb-4">What equipment is included in a Recovery Pod?</h2>
-              <p className="text-lg text-muted-foreground">Seven clinical-grade modalities curated for high-end environments. Every piece is BH Labs branded and professionally installed.</p>
+              <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-4">Why hotel operators are adding wellness revenue now</h2>
+              <p className="text-muted-foreground text-lg">The hospitality wellness market is growing faster than traditional amenity segments. Properties with dedicated wellness offerings attract higher-value guests and unlock new ancillary revenue — without major operational burden.</p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
               {[
-                { name: "HBOT Chamber", desc: "Hyperbaric Oxygen Therapy — pressurized soft chamber for accelerated recovery and cellular regeneration.", image: hbotImage },
-                { name: "Red Light Therapy", desc: "Full-body red and near-infrared panels for skin rejuvenation, inflammation reduction, and muscle recovery.", image: redLightImage },
-                { name: "Infrared Sauna", desc: "Full-spectrum infrared sauna for deep tissue detoxification and cardiovascular conditioning.", image: saunaImage },
-                { name: "Compression Therapy", desc: "Dynamic lymphatic drainage suits for enhanced circulation and faster post-workout recovery.", image: compressionImage },
-                { name: "Lymphatic Drainage", desc: "Advanced lymphatic compression therapy combining red light and pressotherapy for enhanced circulation and detoxification.", image: lymphaticImage },
-                { name: "PEMF Device", desc: "Pulsed Electromagnetic Field therapy for cellular recovery, pain relief, and bone healing.", image: pemfImage },
-                { name: "PEMF Treatment", desc: "Targeted PEMF application with BH Labs branded equipment for localized therapy sessions.", image: pemfTreatmentImage }
+                { icon: DollarSign, title: "Monetize Underused Space", desc: "Convert underperforming square footage into a self-sustaining revenue center generating $25K+/month." },
+                { icon: TrendingUp, title: "Capture Wellness Demand", desc: "Wellness tourism will exceed $1 trillion globally (GWI 2024). Position your property to capture this premium segment." },
+                { icon: Sparkles, title: "Differentiate Guest Experience", desc: "Offer a recovery and wellness amenity that most competing properties simply don't have yet." },
+                { icon: Users, title: "Zero Additional Headcount", desc: "Your existing spa or hospitality staff can operate the pod. BH Labs handles training and certification." }
               ].map((item, i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1, duration: 0.5 }}
-                  className="group rounded-2xl overflow-hidden border border-border bg-card hover:shadow-lg transition-shadow"
-                >
-                  <div className="overflow-hidden bg-neutral-50 flex items-center justify-center max-h-[250px] md:max-h-[400px]">
-                    <img src={item.image} alt={`${item.name} — BH Labs Recovery Pod equipment for hotel wellness`} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 max-h-[250px] md:max-h-[400px]" loading="lazy" />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-lg font-medium text-foreground mb-1">{item.name}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="py-12 md:py-24 bg-card">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div 
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={FADE_UP}
-              className="text-center max-w-3xl mx-auto mb-8 md:mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-4">How does the turnkey installation process work?</h2>
-              <p className="text-muted-foreground text-lg">We handle the complexity. You collect the revenue.</p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                { title: "Custom Design", desc: "Our in-house architect configures the layout perfectly for your available space.", image: turnkeyDesignImage },
-                { title: "Science-Backed", desc: "30+ protocols designed from peer-reviewed research for real results.", image: turnkeyScienceImage },
-                { title: "Full Support", desc: "Comprehensive 1-year warranty, technical support, and maintenance.", image: turnkeySupportImage },
-                { title: "Staff Training", desc: "We train and certify your existing spa staff to run the pod seamlessly.", image: turnkeyTrainingImage }
-              ].map((feature, i) => (
-                <motion.div 
-                  key={i}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { delay: i * 0.1 } } }}
-                  className="bg-background rounded-2xl border border-border overflow-hidden group hover:shadow-lg transition-shadow"
+                  variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.5 } } }}
+                  className="bg-card rounded-2xl p-6 border border-border"
                 >
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img 
-                      src={feature.image} 
-                      alt={`${feature.title} — BH Labs turnkey hotel wellness installation`} 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
-                    />
+                  <div className="w-10 h-10 bg-secondary rounded-xl flex items-center justify-center mb-4">
+                    <item.icon className="w-5 h-5 text-primary" />
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-medium text-foreground mb-2">{feature.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{feature.desc}</p>
-                  </div>
+                  <h3 className="text-base font-medium text-foreground mb-2">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-12 md:py-24 bg-primary text-primary-foreground">
+        {/* ROI CALCULATOR */}
+        <ROICalculator />
+
+        {/* PROOF / CREDIBILITY */}
+        <section className="py-12 md:py-24 bg-primary text-primary-foreground" id="proof">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
               <div>
@@ -330,9 +181,9 @@ export default function Hotels() {
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={FADE_UP}
-                  className="text-2xl md:text-3xl lg:text-5xl font-serif mb-6"
+                  className="text-2xl md:text-3xl lg:text-5xl font-serif mb-4"
                 >
-                  Who trusts BH Labs with their wellness integration?
+                  Why hotel operators take this seriously
                 </motion.h2>
                 <motion.p 
                   initial="hidden"
@@ -341,7 +192,7 @@ export default function Hotels() {
                   variants={FADE_UP}
                   className="text-primary-foreground/80 text-lg mb-8"
                 >
-                  With 5 successful wellness locations across Miami, BH Labs is the standard for premium recovery integration in South Florida.
+                  BH Labs has 5 successful wellness installations across Miami. Every installation is designed, equipped, and supported end-to-end — from architectural layout to staff certification.
                 </motion.p>
                 
                 <motion.div 
@@ -349,18 +200,37 @@ export default function Hotels() {
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={STAGGER}
-                  className="space-y-4"
+                  className="space-y-4 mb-8"
                 >
                   {[
-                    "Equinox Partnership Integrations",
-                    "Reserve Padel Solemia",
-                    "Dr. Johnny Salomon's Medical Facility"
+                    { name: "Equinox Partnership Integrations", detail: "Premium fitness" },
+                    { name: "Reserve Padel Solemia", detail: "Sports & recreation" },
+                    { name: "Dr. Johnny Salomon's Medical Facility", detail: "Medical wellness" }
                   ].map((partner, i) => (
                     <motion.div key={i} variants={FADE_UP} className="flex items-center gap-3 bg-primary-foreground/10 px-4 py-3 rounded-lg backdrop-blur-sm">
-                      <Activity className="w-5 h-5 text-secondary" />
-                      <span className="font-medium text-primary-foreground">{partner}</span>
+                      <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0" />
+                      <div>
+                        <span className="font-medium text-primary-foreground">{partner.name}</span>
+                        <span className="text-primary-foreground/60 text-sm ml-2">— {partner.detail}</span>
+                      </div>
                     </motion.div>
                   ))}
+                </motion.div>
+
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={FADE_UP}
+                  className="bg-primary-foreground/5 border border-primary-foreground/15 rounded-xl p-5"
+                >
+                  <div className="flex items-center gap-2 mb-3">
+                    <Camera className="w-4 h-4 text-secondary" />
+                    <span className="text-sm font-medium text-primary-foreground/70 uppercase tracking-wider">Case Study</span>
+                  </div>
+                  <p className="text-sm text-primary-foreground/60 italic leading-relaxed">
+                    Case study placeholder — add property name, room count, launch timeline, utilization rate, and monthly revenue when available.
+                  </p>
                 </motion.div>
               </div>
 
@@ -387,27 +257,202 @@ export default function Hotels() {
                     </div>
                   </div>
                 </div>
+
+                <p className="text-xs text-primary-foreground/50 mt-4 italic text-center">
+                  Sample projections are based on modeled assumptions such as room count, occupancy, guest utilization, and pricing strategy.
+                </p>
               </motion.div>
             </div>
           </div>
         </section>
 
+        {/* EQUIPMENT BY GUEST OUTCOME */}
+        <section className="py-12 md:py-24 bg-background" id="equipment">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={FADE_UP}
+              className="text-center max-w-3xl mx-auto mb-8 md:mb-16"
+            >
+              <h2 className="text-2xl md:text-3xl lg:text-5xl font-serif text-foreground mb-4">What guest experiences does a Recovery Pod enable?</h2>
+              <p className="text-lg text-muted-foreground">Seven modalities grouped by the wellness outcomes your guests are looking for — each contributing to premium positioning and repeat bookings.</p>
+            </motion.div>
+
+            {[
+              {
+                category: "Recovery & Performance",
+                categoryIcon: Zap,
+                description: "Appeals to fitness-minded travelers, executives recovering from travel fatigue, and guests seeking active recovery.",
+                items: [
+                  { name: "HBOT Chamber", desc: "Pressurized oxygen therapy for accelerated recovery, jet lag relief, and cellular regeneration. A high-demand modality for wellness-forward guests.", image: hbotImage },
+                  { name: "PEMF Therapy", desc: "Pulsed electromagnetic field therapy for deep tissue recovery, pain relief, and post-travel restoration.", image: pemfImage },
+                  { name: "Compression Therapy", desc: "Dynamic compression suits for enhanced circulation and faster physical recovery — popular with active travelers.", image: compressionImage }
+                ]
+              },
+              {
+                category: "Relaxation & Stress Relief",
+                categoryIcon: Heart,
+                description: "Appeals to leisure travelers, couples, and guests seeking spa-level wellness beyond traditional offerings.",
+                items: [
+                  { name: "Infrared Sauna", desc: "Full-spectrum infrared for deep relaxation, detoxification, and cardiovascular support — a premium spa differentiator.", image: saunaImage },
+                  { name: "Red Light Therapy", desc: "Full-body red and near-infrared panels for skin rejuvenation, inflammation reduction, and stress relief.", image: redLightImage }
+                ]
+              },
+              {
+                category: "Circulation & Detox Support",
+                categoryIcon: Droplets,
+                description: "Appeals to health-conscious guests and wellness tourists seeking comprehensive detoxification and recovery protocols.",
+                items: [
+                  { name: "Lymphatic Drainage", desc: "Advanced pressotherapy combining compression and red light for enhanced circulation and full-body detoxification.", image: lymphaticImage },
+                  { name: "Targeted PEMF", desc: "Localized electromagnetic therapy for specific muscle groups and targeted recovery — ideal for post-activity sessions.", image: pemfTreatmentImage }
+                ]
+              }
+            ].map((group, gi) => (
+              <div key={gi} className="mb-12 last:mb-0">
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={FADE_UP}
+                  className="flex items-center gap-3 mb-2"
+                >
+                  <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <group.categoryIcon className="w-4 h-4 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-serif text-foreground">{group.category}</h3>
+                </motion.div>
+                <motion.p
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={FADE_UP}
+                  className="text-sm text-muted-foreground mb-6 max-w-2xl"
+                >{group.description}</motion.p>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {group.items.map((item, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.1, duration: 0.5 }}
+                      className="group rounded-2xl overflow-hidden border border-border bg-card hover:shadow-lg transition-shadow"
+                    >
+                      <div className="overflow-hidden bg-neutral-50 flex items-center justify-center max-h-[250px] md:max-h-[400px]">
+                        <img src={item.image} alt={`${item.name} — BH Labs Recovery Pod`} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 max-h-[250px] md:max-h-[400px]" loading="lazy" />
+                      </div>
+                      <div className="p-5">
+                        <h4 className="text-lg font-medium text-foreground mb-1">{item.name}</h4>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* TURNKEY INSTALLATION — ADDRESS OPERATIONAL FEAR */}
+        <section className="py-12 md:py-24 bg-card">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={FADE_UP}
+              className="text-center max-w-3xl mx-auto mb-8 md:mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-4">You don't need a wellness team. We handle it.</h2>
+              <p className="text-muted-foreground text-lg">BH Labs manages design, equipment, installation, and training. Your existing spa or hospitality staff can operate the pod from day one — with minimal disruption during setup.</p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { title: "Custom Layout Design", desc: "Our in-house architect configures the pod layout to fit your available space — no guesswork, no expensive consultants.", image: turnkeyDesignImage, reassurance: "We adapt to your footprint" },
+                { title: "Science-Backed Protocols", desc: "30+ recovery protocols designed from peer-reviewed research, packaged for a luxury hospitality environment.", image: turnkeyScienceImage, reassurance: "Clinically informed, guest-ready" },
+                { title: "Full Support & Warranty", desc: "Comprehensive 1-year warranty, ongoing technical support, and maintenance — so your team can focus on guests.", image: turnkeySupportImage, reassurance: "We stay with you post-install" },
+                { title: "Staff Training & Certification", desc: "We train and certify your existing spa staff to run every modality confidently. No additional hires required.", image: turnkeyTrainingImage, reassurance: "Your team, fully prepared" }
+              ].map((feature, i) => (
+                <motion.div 
+                  key={i}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { delay: i * 0.1 } } }}
+                  className="bg-background rounded-2xl border border-border overflow-hidden group hover:shadow-lg transition-shadow"
+                >
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img 
+                      src={feature.image} 
+                      alt={`${feature.title} — BH Labs turnkey hotel wellness installation`} 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-medium text-foreground mb-2">{feature.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-3">{feature.desc}</p>
+                    <span className="text-xs font-medium text-emerald-700 bg-emerald-50 px-2 py-1 rounded-full">{feature.reassurance}</span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* OPPORTUNITY COST — PREMIUM, NOT FEAR-BASED */}
+        <section className="py-16 bg-stone-50 border-y border-stone-200">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={FADE_UP}
+              className="max-w-4xl mx-auto text-center"
+            >
+              <h2 className="text-2xl md:text-3xl font-serif text-foreground mb-3">What is the opportunity cost of leaving this space underused?</h2>
+              <p className="text-muted-foreground text-base mb-8 max-w-2xl mx-auto">Every month without a wellness offering is revenue-generating square footage sitting idle. Here's what the numbers suggest.</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-white rounded-xl p-6 border border-stone-200 shadow-sm">
+                  <div className="text-3xl font-serif text-foreground mb-2">$324K</div>
+                  <p className="text-sm text-muted-foreground">Estimated annual revenue opportunity from a single Recovery Pod installation</p>
+                </div>
+                <div className="bg-white rounded-xl p-6 border border-stone-200 shadow-sm">
+                  <div className="text-3xl font-serif text-foreground mb-2">41-175%</div>
+                  <p className="text-sm text-muted-foreground">Higher per-trip spending from wellness travelers vs. standard guests — <em>Global Wellness Institute, 2024</em></p>
+                </div>
+                <div className="bg-white rounded-xl p-6 border border-stone-200 shadow-sm">
+                  <div className="text-3xl font-serif text-foreground mb-2">&lt; 2 Months</div>
+                  <p className="text-sm text-muted-foreground">Typical payback period — faster monetization than most hotel capital investments</p>
+                </div>
+              </div>
+              <p className="text-xs text-muted-foreground/60 mt-6 italic">Figures are illustrative and based on modeled assumptions. Actual results vary by property.</p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* FAQ */}
         <FAQSection items={[
-          { question: "How much revenue can a hotel wellness pod generate?", answer: "A BH Labs Recovery Pod generates approximately $27,000 per month — $21,000 from ADR wellness surcharges ($5/night across 200 rooms at 70% occupancy) plus $6,000 from a-la-carte walk-in sessions. That's $324,000 in annual revenue." },
-          { question: "What is the payback period for a hotel Recovery Pod?", answer: "Less than 2 months. The complete pod investment is approximately $45,000, and at $27,000/month in combined revenue, the investment pays for itself in under 60 days." },
-          { question: "Does the hotel need to hire additional staff?", answer: "No. BH Labs trains and certifies your existing spa staff to operate the Recovery Pod. Zero additional hires required." },
-          { question: "What equipment is included in a Recovery Pod?", answer: "Each Recovery Pod includes an HBOT (Hyperbaric Oxygen Therapy) chamber, red light therapy panels, an infrared sauna, lymphatic drainage suits, and PEMF (Pulsed Electromagnetic Field) devices — seven clinical-grade modalities total." },
-          { question: "How much space does a Recovery Pod require?", answer: "BH Labs provides custom architectural design to fit your available space. Our in-house architect configures the layout to maximize efficiency within your property." },
-          { question: "How do wellness tourists spend compared to average travelers?", answer: "According to the Global Wellness Institute (2024), wellness tourists spend 41-175% more than average travelers, making a Recovery Pod a powerful driver of higher-value bookings and increased ADR." }
+          { question: "What type of hotel is the best fit for a Recovery Pod?", answer: "Recovery Pods work well in luxury hotels, boutique hotels, resorts, and wellness-oriented properties. The best fit is typically a property with 100+ rooms, an existing spa or wellness area (or plans for one), and guests who value premium amenities. That said, BH Labs works with you to assess guest fit during the feasibility call." },
+          { question: "How much staff involvement is required day to day?", answer: "Minimal. BH Labs trains and certifies your existing spa or hospitality staff to operate every modality. There's no need to hire dedicated wellness technicians. Most properties integrate pod operation into their existing spa workflow." },
+          { question: "What kind of space layout works best?", answer: "Our in-house architect designs a custom pod layout for your available space. Most installations require 400-800 square feet, but we can adapt to a range of footprints. We'll evaluate your space during the feasibility review." },
+          { question: "How long does installation take?", answer: "A typical installation takes 2-4 weeks from layout approval to operational launch, depending on property logistics. BH Labs manages the full process — design, equipment delivery, installation, and staff training — to minimize disruption." },
+          { question: "Do you help with pricing strategy and guest packaging?", answer: "Yes. BH Labs provides guidance on ADR surcharge strategy, a-la-carte session pricing, and guest wellness packaging to help maximize revenue from the first day of operation." },
+          { question: "What happens after installation?", answer: "BH Labs provides a comprehensive 1-year warranty, ongoing technical support, and maintenance. We stay involved to ensure the pod operates smoothly and continues to generate revenue for your property." },
+          { question: "Is this best as a spa add-on or standalone offering?", answer: "Both models work. Many properties integrate the Recovery Pod into their existing spa to expand their offering. Others position it as a standalone wellness center. BH Labs helps you evaluate the right approach based on your space, guest profile, and revenue goals." }
         ]} />
 
+        {/* LEAD FORM */}
         <section className="py-12 md:py-24 bg-background relative overflow-hidden" id="contact">
           <div className="absolute top-0 right-0 w-1/3 h-full bg-secondary/30 rounded-l-full blur-3xl -z-10 transform translate-x-1/2" />
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <ContactForm 
-                title="Get Your Revenue Projection" 
-                subtitle="Request a custom proposal and financial model for your property."
+                title="Book a Strategy Call" 
+                subtitle="Tell us about your property and we'll prepare a tailored revenue assessment for your space."
               />
             </div>
           </div>

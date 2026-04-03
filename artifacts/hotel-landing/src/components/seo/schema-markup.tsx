@@ -13,7 +13,7 @@ export function SchemaMarkup({ page }: SchemaMarkupProps) {
     const existingCanonical = document.querySelector('link[data-dynamic]');
     existingCanonical?.remove();
 
-    const dateModified = "2026-04-02";
+    const dateModified = "2026-04-03";
 
     const organization = {
       "@context": "https://schema.org",
@@ -48,8 +48,8 @@ export function SchemaMarkup({ page }: SchemaMarkupProps) {
     const product = {
       "@context": "https://schema.org",
       "@type": "Product",
-      "name": "BH Labs Recovery Pod",
-      "description": "Turnkey wellness pod for hotels featuring HBOT, red light therapy, infrared sauna, lymphatic drainage suits, and PEMF devices. Generates $27K+/month in new revenue with zero additional staff.",
+      "name": "BH Labs Recovery Pod for Hotels",
+      "description": "Turnkey wellness pod for hotels featuring HBOT, red light therapy, infrared sauna, lymphatic drainage, and PEMF devices. Designed to generate $25K+/month in new wellness revenue with zero additional headcount.",
       "brand": { "@type": "Brand", "name": "BH Labs" },
       "offers": {
         "@type": "Offer",
@@ -57,7 +57,7 @@ export function SchemaMarkup({ page }: SchemaMarkupProps) {
         "price": "45000",
         "priceValidUntil": "2026-12-31",
         "availability": "https://schema.org/InStock",
-        "description": "Complete turnkey Recovery Pod installation with 1-year warranty"
+        "description": "Complete turnkey Recovery Pod installation with 1-year warranty and staff training"
       },
       "dateModified": dateModified
     };
@@ -67,12 +67,13 @@ export function SchemaMarkup({ page }: SchemaMarkupProps) {
       "@type": "FAQPage",
       "dateModified": dateModified,
       "mainEntity": [
-        { q: "How much revenue can a hotel wellness pod generate?", a: "A BH Labs Recovery Pod generates approximately $27,000 per month — $21,000 from ADR wellness surcharges ($5/night across 200 rooms at 70% occupancy) plus $6,000 from a-la-carte walk-in sessions. That's $324,000 in annual revenue." },
-        { q: "What is the payback period for a hotel Recovery Pod?", a: "Less than 2 months. The complete pod investment is approximately $45,000, and at $27,000/month in combined revenue, the investment pays for itself in under 60 days." },
-        { q: "Does the hotel need to hire additional staff?", a: "No. BH Labs trains and certifies your existing spa staff to operate the Recovery Pod. Zero additional hires required." },
-        { q: "What equipment is included in a Recovery Pod?", a: "Each Recovery Pod includes an HBOT (Hyperbaric Oxygen Therapy) chamber, red light therapy panels, an infrared sauna, lymphatic drainage suits, and PEMF (Pulsed Electromagnetic Field) devices — seven clinical-grade modalities total." },
-        { q: "How much space does a Recovery Pod require?", a: "BH Labs provides custom architectural design to fit your available space. Our in-house architect configures the layout to maximize efficiency within your property." },
-        { q: "How do wellness tourists spend compared to average travelers?", a: "According to the Global Wellness Institute (2024), wellness tourists spend 41-175% more than average travelers, making a Recovery Pod a powerful driver of higher-value bookings and increased ADR." }
+        { q: "What type of hotel is the best fit for a Recovery Pod?", a: "Recovery Pods work well in luxury hotels, boutique hotels, resorts, and wellness-oriented properties. The best fit is typically a property with 100+ rooms, an existing spa or wellness area, and guests who value premium amenities." },
+        { q: "How much staff involvement is required day to day?", a: "Minimal. BH Labs trains and certifies your existing spa or hospitality staff to operate every modality. There's no need to hire dedicated wellness technicians." },
+        { q: "What kind of space layout works best?", a: "Most installations require 400-800 square feet. Our in-house architect designs a custom pod layout for your available space." },
+        { q: "How long does installation take?", a: "A typical installation takes 2-4 weeks from layout approval to operational launch. BH Labs manages the full process to minimize disruption." },
+        { q: "Do you help with pricing strategy and guest packaging?", a: "Yes. BH Labs provides guidance on ADR surcharge strategy, a-la-carte session pricing, and guest wellness packaging." },
+        { q: "What happens after installation?", a: "BH Labs provides a comprehensive 1-year warranty, ongoing technical support, and maintenance." },
+        { q: "Is this best as a spa add-on or standalone offering?", a: "Both models work. BH Labs helps you evaluate the right approach based on your space, guest profile, and revenue goals." }
       ].map(f => ({
         "@type": "Question",
         "name": f.q,
@@ -85,7 +86,7 @@ export function SchemaMarkup({ page }: SchemaMarkupProps) {
     const webPage = {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "BH Labs Recovery Pods for Hotels & Resorts",
+      "name": "Hotel Wellness Revenue Solution | BH Labs Recovery Pods",
       "url": pageUrl,
       "dateModified": dateModified,
       "publisher": {
@@ -116,10 +117,10 @@ export function SchemaMarkup({ page }: SchemaMarkupProps) {
       document.head.appendChild(meta);
     };
 
-    document.title = "Recovery Pods for Hotels | BH Labs — $324K Annual Revenue";
-    document.querySelector('meta[name="description"]')?.setAttribute("content", "Install a turnkey BH Labs Recovery Pod in your hotel. Generate $27K+/month in wellness revenue with zero additional staff. HBOT, red light therapy, infrared sauna, PEMF. Under 2 month payback.");
-    setMeta("property", "og:title", "Recovery Pods for Hotels | BH Labs");
-    setMeta("property", "og:description", "Install a turnkey BH Labs Recovery Pod. Generate $27K+/month in new wellness revenue with zero additional staff.");
+    document.title = "Hotel Wellness Revenue Solution | BH Labs Recovery Pods — $25K+/Month";
+    document.querySelector('meta[name="description"]')?.setAttribute("content", "Turn underused hotel space into $25K+/month in wellness revenue. BH Labs installs turnkey Recovery Pods — HBOT, red light therapy, infrared sauna, PEMF — with zero additional headcount. Under 2 month payback.");
+    setMeta("property", "og:title", "Hotel Wellness Revenue Solution | BH Labs Recovery Pods");
+    setMeta("property", "og:description", "Turn underused hotel space into $25K+/month in new wellness revenue. Turnkey Recovery Pod installation with zero additional headcount.");
     setMeta("property", "og:url", pageUrl);
     setMeta("property", "og:image", "https://www.bh-labs.com/opengraph.jpg");
     setMeta("property", "og:image:width", "1200");

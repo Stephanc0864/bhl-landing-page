@@ -1,0 +1,270 @@
+You are a senior conversion-focused UI engineer and copy strategist.
+
+Goal:
+Turn this page from a general wellness/equipment pitch into a premium hotel revenue solution page focused on:
+- monetizing underused hotel space
+- creating a luxury guest wellness experience
+- fast payback
+- easy turnkey implementation
+- strong credibility
+
+Important:
+- Keep the overall premium/luxury visual style
+- Do not rebuild from scratch unless necessary
+- Improve copy, hierarchy, section order, CTA strategy, form UX, and calculator trust
+- Preserve responsiveness and performance
+- Keep code clean and production-ready
+- Do not add fake testimonials, fake logos, fake stats, or fake case studies
+- If proof assets are not available, create clear placeholder components with labels for future real content
+- Keep tone sophisticated, credible, and executive-level, not aggressive or overly salesy
+
+Primary conversion objective:
+- Book qualified feasibility / strategy calls
+Secondary conversion objective:
+- Get calculator engagement and estimate submissions
+
+Make these changes:
+
+1) HERO SECTION
+Replace broad hero messaging with more specific, believable messaging.
+
+Update hero headline to:
+“Turn Underused Hotel Space Into a New $25K+/Month Revenue Stream”
+
+Add subheadline:
+“BH Labs designs and installs turnkey Recovery Pods for hotels and resorts—without requiring additional headcount.”
+
+CTA structure:
+- Primary CTA: “Calculate My Revenue Potential”
+- Secondary CTA: “Book a Strategy Call”
+
+Under the CTAs, add 3 trust bullets:
+- Turnkey install + staff training
+- Typical payback in under 2 months
+- Trusted across 5 Miami wellness locations
+
+Also add a small credibility/disclaimer line near the hero stats:
+“Illustrative figures based on property size, occupancy, utilization, and pricing assumptions.”
+
+2) REDUCE CTA CONFUSION SITEWIDE
+Standardize CTA hierarchy across the page:
+- Primary CTA everywhere: “Calculate My Revenue Potential”
+- Secondary CTA: “Book a Strategy Call”
+
+After the calculator, add a stronger transition CTA block:
+“See what this could generate at your property?”
+“Book a 15-minute feasibility call to review your layout, guest fit, and revenue potential.”
+
+3) MOVE CREDIBILITY MUCH HIGHER
+Right below the hero or immediately after the “why this matters” section, add a proof/credibility block.
+
+This block should include:
+- heading: “Why hotel operators take this seriously”
+- short explanatory copy
+- placeholders or real assets for:
+  - install photos
+  - operator/location logos
+  - mini case study
+  - implementation footprint/timeline
+- a note explaining assumptions behind revenue examples
+
+Include a small note like:
+“Sample projections are based on modeled assumptions such as room count, occupancy, guest utilization, and pricing strategy.”
+
+If real case study data is unavailable, create a styled placeholder card labeled:
+“Case study placeholder — add property name, room count, launch timeline, utilization, and monthly revenue.”
+
+4) IMPROVE THE PAGE FLOW
+Reorder sections into this sequence:
+
+1. Hero
+2. Why this matters now
+3. Revenue model / ROI calculator
+4. Proof / credibility
+5. What is included
+6. Installation process
+7. FAQ
+8. Lead form
+
+Move trust/proof higher than it is now.
+Place at least one proof block before equipment/product detail.
+
+5) REFRAME “WHY THIS MATTERS”
+Make this section about business opportunity, not just wellness trend.
+
+Emphasize:
+- underused space monetization
+- wellness traveler demand
+- guest experience differentiation
+- new ancillary revenue
+- repositioning without major operational burden
+
+Keep it concise and executive-facing.
+
+6) CALCULATOR: IMPROVE TRUST AND CLARITY
+Keep the ROI calculator, but make it more credible and easier to understand.
+
+Add:
+- a “How we calculate this” expandable accordion or disclosure
+- assumption helper text under key metrics
+- disclaimer below results:
+  “Illustrative estimate only. Final projections depend on room count, occupancy, pricing strategy, utilization, and operating model.”
+- optional lead capture CTA under results:
+  “Send me my estimate”
+
+If there is a “property value increase” output, either remove it or soften it significantly unless the page already has strong proof/source support.
+Prefer removing it if unsupported.
+
+Explain low operating costs if shown.
+Example helper text:
+“Estimated operating costs reflect basic staffing/utilization assumptions and may vary by property.”
+
+7) REFRAME THE “COST OF NOT INSTALLING” SECTION
+Keep the idea, but change the tone to feel premium and advisory, not fear-based.
+
+Rename section to:
+“What is the opportunity cost of leaving this space underused?”
+
+Replace aggressive styling and urgency language with cleaner business metrics like:
+- Estimated annual revenue opportunity
+- Higher wellness traveler spend potential
+- Faster monetization of unused space
+
+Use elegant visuals, not alarming red-heavy design.
+
+8) REFRAME EQUIPMENT AS HOSPITALITY OUTCOMES
+Do not lead with a product catalog feel.
+
+Group equipment/modalities by guest outcome:
+- Recovery & Performance
+- Relaxation & Stress Relief
+- Circulation & Detox Support
+
+For each group, explain:
+- what guest experience it supports
+- what kind of traveler it appeals to
+- how it contributes to premium positioning / monetization
+
+Keep product-level details secondary.
+
+9) MAKE INSTALLATION PROCESS REMOVE OPERATIONAL FEAR
+Revise the installation/process section to directly answer hotel operator objections.
+
+Explicitly communicate:
+- No need to build an internal wellness team
+- BH Labs handles design, equipment, install, and training
+- Existing spa or hospitality staff can operate the pod
+- Minimal operational disruption during setup
+
+Use a clean step-by-step visual with reassuring subcopy.
+
+10) STRENGTHEN SOCIAL PROOF
+The current trust section is too light for a premium B2B offer.
+
+Upgrade it to feel institutional.
+Include placeholders/components for:
+- real logos
+- number of installs
+- location names
+- before/after project images
+- operator quote
+- implementation timeline
+- footprint used
+
+Do not invent specifics.
+If assets/data are missing, create a polished “Add proof here” framework.
+
+11) FAQ: FOCUS ON BUYING OBJECTIONS
+Revise FAQ to answer high-intent questions like:
+- What type of hotel is the best fit for a Recovery Pod?
+- How much staff involvement is required day to day?
+- What kind of space layout works best?
+- How long does installation take?
+- Do you help with pricing strategy and guest packaging?
+- What happens after installation?
+- Is this best as a spa add-on or standalone offering?
+
+Make answers practical and buyer-oriented.
+
+12) FORM: IMPROVE LEAD QUALIFICATION
+Upgrade the form to better qualify serious buyers.
+
+Add fields such as:
+- Role: Decision-maker / Recommender / Researcher
+- Stage: Exploring / Budgeting / Approved / Ready this quarter
+- Property type: Luxury hotel / Boutique hotel / Resort / Wellness resort
+- Primary goal: ADR increase / New guest amenity / Wellness repositioning / Unused space monetization
+- Existing spa or wellness team? Yes/No
+- Estimated available footprint
+- Launch timeline
+- Would you like a custom ROI estimate? Yes/No
+
+Most important qualification field:
+- “When are you looking to implement this?”
+
+13) REDUCE FORM FRICTION
+Turn the form into a 2-step form:
+Step 1:
+- contact info
+- property basics
+
+Step 2:
+- qualification questions
+
+Add:
+- progress indicator
+- smooth validation
+- calculator values prefilled into the form if available
+- maintain accessibility and mobile usability
+
+14) COPY POSITIONING SHIFT
+Across the full page, shift messaging away from:
+- wellness equipment
+- product catalog language
+- modality-first framing
+
+And toward:
+- new revenue line
+- luxury guest experience
+- underused space monetization
+- turnkey rollout
+- fast payback
+- implementation ease
+- property differentiation
+
+The page should feel like a hotel revenue and positioning solution supported by wellness infrastructure.
+
+15) DESIGN / UX REQUIREMENTS
+- Maintain luxury hospitality aesthetic
+- Keep spacing generous and premium
+- Improve scannability with better headings and subheads
+- Make trust elements visible earlier
+- Preserve mobile responsiveness
+- Ensure CTA buttons are visually distinct with clear primary/secondary hierarchy
+- Keep animations subtle if any exist
+- Avoid clutter
+
+16) IMPLEMENTATION NOTES
+Please:
+- inspect the existing page structure and edit the current components where possible
+- refactor repetitive CTA labels into reusable constants/components if appropriate
+- make section ordering logical and maintainable
+- add comments only where useful
+- ensure form state and calculator state are stable
+- keep the page deployable
+
+17) DELIVERABLES
+Provide:
+1. Updated page implementation
+2. Any new reusable components
+3. Short summary of what changed
+4. List of any placeholders that still need real business assets/data
+5. Note any claims that should be legally/commercially verified before publishing
+
+Success criteria:
+- The page reads like a premium hotel revenue solution
+- Trust appears early
+- Calculator feels believable
+- CTA hierarchy is clear
+- Form qualifies buyers better
+- The experience feels more credible, more specific, and more conversion-oriented
