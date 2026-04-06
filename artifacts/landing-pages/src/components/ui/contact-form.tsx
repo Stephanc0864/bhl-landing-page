@@ -251,7 +251,7 @@ export function ContactForm({ type, title, subtitle }: ContactFormProps) {
       // Send to email webhook (delivers to info@thebiohacklab.com + stephan.coles@thebiohacklab.com)
       await fetch("https://bh-labs-forms.loca.lt", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", "Bypass-Tunnel-Reminder": "true" },
         body: JSON.stringify(payload),
       });
 
@@ -267,7 +267,7 @@ export function ContactForm({ type, title, subtitle }: ContactFormProps) {
       try {
         await fetch("https://api.hsforms.com/submissions/v3/integration/submit/48197674/placeholder-form-id", {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: { "Content-Type": "application/json", "Bypass-Tunnel-Reminder": "true" },
           body: JSON.stringify({
             fields: Object.entries(payload).map(([k, v]) => ({ name: k, value: String(v ?? "") })),
             context: { pageUri: window.location.href, pageName: document.title },
