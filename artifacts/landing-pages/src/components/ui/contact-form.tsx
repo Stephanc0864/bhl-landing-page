@@ -249,7 +249,7 @@ export function ContactForm({ type, title, subtitle }: ContactFormProps) {
 
     try {
       // Send to email webhook (delivers to info@thebiohacklab.com + stephan.coles@thebiohacklab.com)
-      await fetch("https://academics-probably-forestry-hormone.trycloudflare.com", {
+      await fetch("https://possession-assistant-eagles-positions.trycloudflare.com", {
         method: "POST",
         headers: { "Content-Type": "application/json",  },
         body: JSON.stringify(payload),
