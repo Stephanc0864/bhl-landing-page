@@ -32,8 +32,10 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary",
-                  location === link.href ? "text-primary" : "text-muted-foreground"
+                  "text-sm font-semibold tracking-wide transition-all duration-200 px-3 py-1.5 rounded-md",
+                  location === link.href 
+                    ? "text-white bg-primary shadow-md shadow-primary/30" 
+                    : "text-muted-foreground/70 hover:text-foreground hover:bg-secondary/50"
                 )}
                 data-testid={link.testId}
               >
