@@ -176,10 +176,10 @@ export function SchemaMarkup({ page }: SchemaMarkupProps) {
     };
 
     const titleMap: Record<string, string> = {
-      hotels: "Recovery Pods for Hotels | BH Labs — $324K Annual Revenue",
-      residential: "Recovery Pods for Luxury Residential | BH Labs — 10-25% Property Value Increase",
-      fitness: "Recovery Pods for Fitness and Sports Club | BH Labs — Boost Member Retention",
-      athletics: "Recovery Pods for University Athletics | BH Labs — Pro-Level Recovery"
+      hotels: "Recovery Pods for Hotels & Resorts | BH Labs — Turnkey Wellness Revenue",
+      residential: "Recovery Pods for Luxury Residential & HOAs | BH Labs — Wellness Amenity ROI",
+      fitness: "Recovery Pods for Gyms & Sports Clubs | BH Labs — Premium Member Amenity",
+      athletics: "Recovery Pods for Universities & Athletic Programs | BH Labs — Athlete Recovery"
     };
 
     const descriptionMap: Record<string, string> = {

@@ -313,6 +313,9 @@ export default function Residential() {
                 title="Increase Your Property Value NOW" 
                 subtitle="Request a comprehensive property assessment and ROI analysis from BH Labs."
               />
+              <p className="text-center text-sm text-muted-foreground mt-6">
+                Prefer to call? Reach us directly at <a href="tel:9548705814" className="text-primary hover:underline font-medium">(954) 870-5814</a> or email <a href="mailto:info@thebiohacklab.com" className="text-primary hover:underline font-medium">info@thebiohacklab.com</a>
+              </p>
             </div>
           </div>
         </section>

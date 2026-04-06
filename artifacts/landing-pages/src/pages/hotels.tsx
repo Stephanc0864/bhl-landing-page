@@ -116,6 +116,9 @@ export default function Hotels() {
             <p className="text-base md:text-lg text-foreground max-w-4xl mx-auto text-center leading-relaxed">
               <strong>BH Labs installs turnkey Recovery Pods</strong> — HBOT, red light therapy, infrared sauna, PEMF, and lymphatic drainage — in hotels and resorts. A complete pod costs approximately <strong>$49,000</strong>, generates <strong>$60,000+/month</strong> in new wellness revenue, and typically pays for itself within <strong>6-12 months</strong>. No additional staff required. Based in Miami, FL.
             </p>
+            <p className="text-sm text-muted-foreground max-w-4xl mx-auto text-center mt-2">
+              BH Labs guest packages typically range from $75 (Morning Activation, 45 min) to $300+ (Full Longevity Session, 90+ min). Calculator defaults reflect a blended $85 average.
+            </p>
           </div>
         </section>
 
@@ -361,13 +364,16 @@ export default function Hotels() {
                   className="space-y-4"
                 >
                   {[
-                    "Equinox Partnership Integrations",
-                    "Reserve Padel Solemia",
-                    "Dr. Johnny Salomon's Medical Facility"
+                    { name: "Equinox at Merrick Park", desc: "Recovery Pod operational inside one of South Florida's most prestigious fitness facilities." },
+                    { name: "Reserve Padel at Sole Mia", desc: "Installed at South Florida's #1 padel facility. Post-match recovery drives repeat visits." },
+                    { name: "Dr. Johnny Salomon Medical", desc: "Integrated into a leading plastic surgery practice for post-procedure recovery protocols." }
                   ].map((partner, i) => (
-                    <motion.div key={i} variants={FADE_UP} className="flex items-center gap-3 bg-primary-foreground/10 px-4 py-3 rounded-lg backdrop-blur-sm">
-                      <Activity className="w-5 h-5 text-secondary" />
-                      <span className="font-medium text-primary-foreground">{partner}</span>
+                    <motion.div key={i} variants={FADE_UP} className="flex items-start gap-3 bg-primary-foreground/10 px-4 py-3 rounded-lg backdrop-blur-sm">
+                      <Activity className="w-5 h-5 mt-1 text-secondary flex-shrink-0" />
+                      <div>
+                        <span className="font-medium text-primary-foreground">{partner.name}</span>
+                        <p className="text-sm text-primary-foreground/60 mt-0.5">{partner.desc}</p>
+                      </div>
                     </motion.div>
                   ))}
                 </motion.div>
@@ -420,6 +426,9 @@ export default function Hotels() {
                 title="Get Your Revenue Projection" 
                 subtitle="Request a custom proposal and financial model for your property."
               />
+              <p className="text-center text-sm text-muted-foreground mt-6">
+                Prefer to call? Reach us directly at <a href="tel:9548705814" className="text-primary hover:underline font-medium">(954) 870-5814</a> or email <a href="mailto:info@thebiohacklab.com" className="text-primary hover:underline font-medium">info@thebiohacklab.com</a>
+              </p>
             </div>
           </div>
         </section>
