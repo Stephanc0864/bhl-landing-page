@@ -112,7 +112,7 @@ export default function Fitness() {
         <section className="py-8 bg-secondary/30 border-b border-border">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <p className="text-base md:text-lg text-foreground max-w-4xl mx-auto text-center leading-relaxed">
-              <strong>BH Labs installs turnkey Recovery Pods</strong> in gyms, fitness studios, and padel clubs. A complete pod costs approximately <strong>$45,000</strong>, enables a <strong>premium membership tier</strong>, boosts member retention by up to <strong>30%</strong>, and pays for itself through higher-value memberships. No additional staff required.
+              <strong>BH Labs installs turnkey Recovery Pods</strong> in gyms, fitness studios, and padel clubs. A complete pod costs approximately <strong>$49,000</strong>, enables a <strong>premium membership tier</strong>, boosts member retention by up to <strong>30%</strong>, and pays for itself through higher-value memberships. No additional staff required.
             </p>
           </div>
         </section>
@@ -396,7 +396,7 @@ export default function Fitness() {
 
         <FAQSection items={[
           { question: "How does a Recovery Pod help with member retention?", answer: "Members who use recovery equipment stay 30% longer on average. A Recovery Pod gives members a reason to upgrade to a premium tier and keeps them coming back — reducing churn and increasing lifetime value." },
-          { question: "What's the ROI for a fitness facility?", answer: "A BH Labs Recovery Pod costs approximately $45,000. By launching a premium recovery membership tier ($50-100/month per member), most facilities see full payback within 3-6 months while generating recurring revenue." },
+          { question: "What's the ROI for a fitness facility?", answer: "A BH Labs Recovery Pod costs approximately $49,000. By launching a premium recovery membership tier ($50-100/month per member), most facilities see full payback within 3-6 months while generating recurring revenue." },
           { question: "Does our staff need special training?", answer: "BH Labs provides comprehensive staff training and certification. Your existing team will be fully equipped to guide members through 30+ recovery protocols." },
           { question: "How much space does a Recovery Pod require?", answer: "Our in-house architect designs the pod layout to fit your available space. Whether you have a spare room or an open area, we'll configure equipment to maximize efficiency." },
           { question: "What types of fitness facilities use Recovery Pods?", answer: "Gyms, CrossFit boxes, padel clubs, boutique fitness studios, martial arts academies, and multi-sport facilities. Any facility looking to differentiate with premium recovery." },

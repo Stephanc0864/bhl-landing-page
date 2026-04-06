@@ -179,7 +179,7 @@ export default function CampaignResidential() {
                   <motion.div variants={FADE_UP} className="bg-background p-6 rounded-2xl border border-border">
                     <Clock className="w-8 h-8 text-primary mb-4" />
                     <div className="text-2xl font-serif text-foreground mb-1">10 Months</div>
-                    <div className="text-sm text-muted-foreground">Average payback period on ~$45,000 complete pod investment</div>
+                    <div className="text-sm text-muted-foreground">Average payback period on ~$49,000 complete pod investment</div>
                   </motion.div>
                   <motion.div variants={FADE_UP} className="bg-background p-6 rounded-2xl border border-border">
                     <TrendingUp className="w-8 h-8 text-primary mb-4" />
@@ -188,7 +188,7 @@ export default function CampaignResidential() {
                   </motion.div>
                   <motion.div variants={FADE_UP} className="bg-background p-6 rounded-2xl border border-border">
                     <Zap className="w-8 h-8 text-primary mb-4" />
-                    <div className="text-2xl font-serif text-foreground mb-1">$45K+/yr</div>
+                    <div className="text-2xl font-serif text-foreground mb-1">$49K+/yr</div>
                     <div className="text-sm text-muted-foreground">Net annual revenue for the HOA post-payback</div>
                   </motion.div>
                 </div>
@@ -206,7 +206,7 @@ export default function CampaignResidential() {
 
                 <div className="absolute -bottom-8 -left-8 bg-card p-6 rounded-2xl shadow-xl border border-border max-w-xs">
                   <div className="text-sm font-medium uppercase text-muted-foreground mb-2">Net Annual Revenue</div>
-                  <div className="text-3xl font-serif text-foreground">+$45,000</div>
+                  <div className="text-3xl font-serif text-foreground">+$49,000</div>
                   <div className="text-xs text-muted-foreground mt-2">Pure profit for the HOA post-payback.</div>
                 </div>
               </motion.div>
@@ -374,7 +374,7 @@ export default function CampaignResidential() {
                 Your Residents Deserve World-Class Wellness
               </h2>
               <p className="text-base md:text-lg text-muted-foreground mb-6 md:mb-10 max-w-2xl mx-auto">
-                Competing properties are already adding wellness amenities. Don't leave $45K+ in annual revenue and a 10-25% property value increase on the table.
+                Competing properties are already adding wellness amenities. Don't leave $49K+ in annual revenue and a 10-25% property value increase on the table.
               </p>
               <Button size="lg" className="h-14 px-8 text-base" asChild>
                 <a href="#contact">

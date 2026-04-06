@@ -10,15 +10,15 @@ interface ROICalculatorProps {
 export function ROICalculator({ type }: ROICalculatorProps) {
   const isHotel = type === "hotel";
 
-  const [units, setUnits] = useState(isHotel ? 200 : 150);
-  const [rate, setRate] = useState(isHotel ? 5 : 30);
-  const [occupancy, setOccupancy] = useState(isHotel ? 70 : 95);
-  const [sessionsPerDay, setSessionsPerDay] = useState(10);
-  const [sessionPrice, setSessionPrice] = useState(20);
-  const [operatingCost, setOperatingCost] = useState(450);
+  const [units, setUnits] = useState(isHotel ? 200 : 200);
+  const [rate, setRate] = useState(isHotel ? 10 : 35);
+  const [occupancy, setOccupancy] = useState(isHotel ? 70 : 60);
+  const [sessionsPerDay, setSessionsPerDay] = useState(isHotel ? 8 : 0);
+  const [sessionPrice, setSessionPrice] = useState(isHotel ? 85 : 0);
+  const [operatingCost, setOperatingCost] = useState(isHotel ? 1200 : 600);
 
   const results = useMemo(() => {
-    const investmentCost = 45000;
+    const investmentCost = 49000;
     if (isHotel) {
       const adrMonthly = units * (occupancy / 100) * rate * 30;
       const alaCarteMonthly = sessionsPerDay * sessionPrice * 30;

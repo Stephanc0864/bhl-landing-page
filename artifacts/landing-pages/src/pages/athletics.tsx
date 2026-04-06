@@ -115,7 +115,7 @@ export default function Athletics() {
         <section className="py-8 bg-secondary/30 border-b border-border">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <p className="text-base md:text-lg text-foreground max-w-4xl mx-auto text-center leading-relaxed">
-              <strong>BH Labs installs turnkey Recovery Pods</strong> in university athletic facilities. A complete pod costs approximately <strong>$45,000</strong> — a fraction of annual outsourced recovery costs — and serves <strong>every sport, every athlete</strong>, with 30+ science-backed protocols. No additional staff required.
+              <strong>BH Labs installs turnkey Recovery Pods</strong> in university athletic facilities. A complete pod costs approximately <strong>$49,000</strong> — a fraction of annual outsourced recovery costs — and serves <strong>every sport, every athlete</strong>, with 30+ science-backed protocols. No additional staff required.
             </p>
           </div>
         </section>
@@ -199,7 +199,7 @@ export default function Athletics() {
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent rounded-2xl flex items-end p-8">
                   <div className="text-primary-foreground">
                     <div className="text-sm font-medium uppercase tracking-wider mb-2 opacity-80">One-Time Investment</div>
-                    <div className="text-3xl md:text-5xl font-sans font-bold tracking-tighter text-secondary">~$45K</div>
+                    <div className="text-3xl md:text-5xl font-sans font-bold tracking-tighter text-secondary">~$49K</div>
                     <div className="text-sm mt-2 opacity-80">vs. $100K+/year in outsourced recovery</div>
                   </div>
                 </div>
@@ -399,7 +399,7 @@ export default function Athletics() {
 
         <FAQSection items={[
           { question: "How does a Recovery Pod benefit a university athletics program?", answer: "A Recovery Pod provides 7 clinical-grade modalities (HBOT, red light, infrared sauna, compression, PEMF, lymphatic drainage) that accelerate return-to-play, reduce injury downtime, and serve every sport — all in one on-site installation." },
-          { question: "How does the cost compare to outsourcing recovery?", answer: "A complete Recovery Pod costs approximately $45,000 — a one-time investment that replaces $100K+/year in outsourced cryo sessions, off-campus recovery centers, and fragmented treatment services." },
+          { question: "How does the cost compare to outsourcing recovery?", answer: "A complete Recovery Pod costs approximately $49,000 — a one-time investment that replaces $100K+/year in outsourced cryo sessions, off-campus recovery centers, and fragmented treatment services." },
           { question: "Can one pod serve all our sports programs?", answer: "Yes. The Recovery Pod is designed to serve athletes across every sport — football, basketball, soccer, track, swimming, and more. 30+ protocols cover sport-specific recovery needs." },
           { question: "Does our athletic training staff need certification?", answer: "BH Labs provides comprehensive training and certification for your athletic trainers. No additional hires required — your existing staff will be fully equipped to run every protocol." },
           { question: "How does recovery technology help with recruiting?", answer: "Top recruits compare facilities. A Recovery Pod signals that your program invests in athlete health and performance, giving you a tangible recruiting advantage over programs without dedicated recovery." },

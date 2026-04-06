@@ -108,7 +108,7 @@ export default function Residential() {
         <section className="py-8 bg-secondary/30 border-b border-border">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <p className="text-base md:text-lg text-foreground max-w-4xl mx-auto text-center leading-relaxed">
-              <strong>BH Labs installs turnkey Recovery Pods</strong> in luxury residential buildings and HOA communities. A complete pod costs approximately <strong>$45,000</strong>, generates <strong>$4,500+/month</strong> in new HOA revenue, and achieves payback in approximately <strong>10 months</strong>. According to the <strong>Global Wellness Institute (2025)</strong>, wellness-integrated properties see a <strong>10-25% increase in property value</strong>.
+              <strong>BH Labs installs turnkey Recovery Pods</strong> in luxury residential buildings and HOA communities. A complete pod costs approximately <strong>$49,000</strong>, generates <strong>$4,500+/month</strong> in new HOA revenue, and achieves payback in approximately <strong>10 months</strong>. According to the <strong>Global Wellness Institute (2025)</strong>, wellness-integrated properties see a <strong>10-25% increase in property value</strong>.
             </p>
           </div>
         </section>
@@ -141,7 +141,7 @@ export default function Residential() {
                   <motion.div variants={FADE_UP} className="bg-card p-6 rounded-2xl border border-border">
                     <Clock className="w-8 h-8 text-primary mb-4" />
                     <div className="text-2xl font-serif text-foreground mb-1">10 Months</div>
-                    <div className="text-sm text-muted-foreground">Average payback period on ~$45,000 complete pod investment</div>
+                    <div className="text-sm text-muted-foreground">Average payback period on ~$49,000 complete pod investment</div>
                   </motion.div>
                 </div>
               </motion.div>
@@ -158,7 +158,7 @@ export default function Residential() {
                 
                 <div className="absolute -bottom-8 -left-8 bg-card p-6 rounded-2xl shadow-xl border border-border max-w-xs">
                   <div className="text-sm font-medium uppercase text-muted-foreground mb-2">Net Annual Revenue</div>
-                  <div className="text-3xl font-serif text-foreground">+$45,000</div>
+                  <div className="text-3xl font-serif text-foreground">+$49,000</div>
                   <div className="text-xs text-muted-foreground mt-2">Pure profit for the HOA post-payback.</div>
                 </div>
               </motion.div>
@@ -179,7 +179,7 @@ export default function Residential() {
               <h2 className="text-2xl md:text-3xl font-serif text-foreground mb-6">What's the cost of <span className="text-red-600 italic">not</span> offering premium wellness?</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="bg-white rounded-xl p-6 border border-red-200 shadow-sm">
-                  <div className="text-3xl font-serif text-red-600 mb-2">$45K+</div>
+                  <div className="text-3xl font-serif text-red-600 mb-2">$49K+</div>
                   <p className="text-sm text-muted-foreground">Annual net revenue left on the table from unused amenity space</p>
                 </div>
                 <div className="bg-white rounded-xl p-6 border border-red-200 shadow-sm">
@@ -295,8 +295,8 @@ export default function Residential() {
         </section>
 
         <FAQSection items={[
-          { question: "How much revenue can a residential Recovery Pod generate?", answer: "A BH Labs Recovery Pod generates approximately $4,500 per month for an HOA with 150 units at a $30/month wellness fee. That's $45,000+ in net annual revenue after payback." },
-          { question: "What is the payback period for a residential Recovery Pod?", answer: "Approximately 10 months. The complete pod investment is about $45,000, paid back through monthly wellness fees." },
+          { question: "How much revenue can a residential Recovery Pod generate?", answer: "A BH Labs Recovery Pod generates approximately $4,500 per month for an HOA with 150 units at a $30/month wellness fee. That's $49,000+ in net annual revenue after payback." },
+          { question: "What is the payback period for a residential Recovery Pod?", answer: "Approximately 10 months. The complete pod investment is about $49,000, paid back through monthly wellness fees." },
           { question: "Does a Recovery Pod increase property value?", answer: "Yes. According to the Global Wellness Institute's 2025 report, wellness-integrated properties see a 10-25% increase in property value." },
           { question: "What equipment is included?", answer: "Each Recovery Pod includes an HBOT chamber, red light therapy panels, infrared sauna, lymphatic drainage suits, PEMF devices, and custom architectural design — seven clinical-grade modalities total." },
           { question: "Does the property need dedicated staff?", answer: "No. The Recovery Pod includes 30+ self-guided, research-backed protocols that residents can use safely without supervision. BH Labs also provides a 1-year comprehensive warranty and technical support." },

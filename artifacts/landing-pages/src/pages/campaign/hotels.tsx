@@ -169,7 +169,7 @@ export default function CampaignHotels() {
               {[
                 { title: "ADR Revenue", value: "$21,000/mo", subtext: "200 rooms x 70% occupancy x $5/night wellness surcharge", icon: TrendingUp },
                 { title: "A-La-Carte Sessions", value: "$6,000/mo", subtext: "~10 walk-in sessions/day at $20/session average", icon: DollarSign },
-                { title: "Payback Period", value: "< 2 Months", subtext: "On a ~$45,000 pod investment with combined revenue streams", icon: Zap },
+                { title: "Payback Period", value: "< 2 Months", subtext: "On a ~$49,000 pod investment with combined revenue streams", icon: Zap },
                 { title: "Additional Staff", value: "Zero", subtext: "We train and certify your existing spa staff to run the pod", icon: Users }
               ].map((stat, i) => (
                 <motion.div

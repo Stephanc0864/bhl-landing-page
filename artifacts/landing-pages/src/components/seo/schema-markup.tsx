@@ -61,7 +61,7 @@ export function SchemaMarkup({ page }: SchemaMarkupProps) {
       "offers": {
         "@type": "Offer",
         "priceCurrency": "USD",
-        "price": "45000",
+        "price": "49000",
         "priceValidUntil": "2026-12-31",
         "availability": "https://schema.org/InStock",
         "description": "Complete turnkey Recovery Pod installation with 1-year warranty"
@@ -72,15 +72,15 @@ export function SchemaMarkup({ page }: SchemaMarkupProps) {
     const faqsByPage: Record<string, Array<{q: string; a: string}>> = {
       hotels: [
         { q: "How much revenue can a hotel wellness pod generate?", a: "A BH Labs Recovery Pod generates approximately $27,000 per month — $21,000 from ADR wellness surcharges ($5/night across 200 rooms at 70% occupancy) plus $6,000 from a-la-carte walk-in sessions. That's $324,000 in annual revenue." },
-        { q: "What is the payback period for a hotel Recovery Pod?", a: "Less than 2 months. The complete pod investment is approximately $45,000, and at $27,000/month in combined revenue, the investment pays for itself in under 60 days." },
+        { q: "What is the payback period for a hotel Recovery Pod?", a: "Typically 6-12 months depending on utilization, with high-traffic properties achieving significantly faster payback. The complete pod investment is approximately $49,000 — intentionally priced below traditional spa buildouts ($150K-$500K)." },
         { q: "Does the hotel need to hire additional staff?", a: "No. BH Labs trains and certifies your existing spa staff to operate the Recovery Pod. Zero additional hires required." },
         { q: "What equipment is included in a Recovery Pod?", a: "Each Recovery Pod includes an HBOT (Hyperbaric Oxygen Therapy) chamber, red light therapy panels, an infrared sauna, lymphatic drainage suits, and PEMF (Pulsed Electromagnetic Field) devices — seven clinical-grade modalities total." },
         { q: "How much space does a Recovery Pod require?", a: "BH Labs provides custom architectural design to fit your available space. Our in-house architect configures the layout to maximize efficiency within your property." },
         { q: "How do wellness tourists spend compared to average travelers?", a: "According to the Global Wellness Institute (2024), wellness tourists spend 41-175% more than average travelers, making a Recovery Pod a powerful driver of higher-value bookings and increased ADR." }
       ],
       residential: [
-        { q: "How much revenue can a residential Recovery Pod generate?", a: "A BH Labs Recovery Pod generates approximately $4,500 per month for an HOA with 150 units at a $30/month wellness fee. That's $45,000+ in net annual revenue after payback." },
-        { q: "What is the payback period for a residential Recovery Pod?", a: "Approximately 10 months. The complete pod investment is about $45,000, paid back through monthly wellness fees." },
+        { q: "How much revenue can a residential Recovery Pod generate?", a: "A BH Labs Recovery Pod generates approximately $4,500 per month for an HOA with 150 units at a $30/month wellness fee. That's $49,000+ in net annual revenue after payback." },
+        { q: "What is the payback period for a residential Recovery Pod?", a: "Approximately 10 months. The complete pod investment is about $49,000, paid back through monthly wellness fees." },
         { q: "Does a Recovery Pod increase property value?", a: "Yes. According to the Global Wellness Institute's 2025 report, wellness-integrated properties see a 10-25% increase in property value." },
         { q: "What equipment is included?", a: "Each Recovery Pod includes an HBOT chamber, red light therapy panels, infrared sauna, lymphatic drainage suits, PEMF devices, and custom architectural design — seven clinical-grade modalities total." },
         { q: "Does the property need dedicated staff?", a: "No. The Recovery Pod includes 30+ self-guided, research-backed protocols that residents can use safely without supervision. BH Labs also provides a 1-year comprehensive warranty and technical support." },
@@ -88,7 +88,7 @@ export function SchemaMarkup({ page }: SchemaMarkupProps) {
       ],
       fitness: [
         { q: "How does a Recovery Pod help with member retention?", a: "Members who use recovery equipment stay 30% longer on average. A Recovery Pod gives members a reason to upgrade to a premium tier and keeps them coming back — reducing churn and increasing lifetime value." },
-        { q: "What's the ROI for a fitness facility?", a: "A BH Labs Recovery Pod costs approximately $45,000. By launching a premium recovery membership tier ($50-100/month per member), most facilities see full payback within 3-6 months while generating recurring revenue." },
+        { q: "What's the ROI for a fitness facility?", a: "A BH Labs Recovery Pod costs approximately $49,000. By launching a premium recovery membership tier ($50-100/month per member), most facilities see full payback within 3-6 months while generating recurring revenue." },
         { q: "Does our staff need special training?", a: "BH Labs provides comprehensive staff training and certification. Your existing team will be fully equipped to guide members through 30+ recovery protocols." },
         { q: "How much space does a Recovery Pod require?", a: "Our in-house architect designs the pod layout to fit your available space. Whether you have a spare room or an open area, we'll configure equipment to maximize efficiency." },
         { q: "What types of fitness facilities use Recovery Pods?", a: "Gyms, CrossFit boxes, padel clubs, boutique fitness studios, martial arts academies, and multi-sport facilities. Any facility looking to differentiate with premium recovery." },
@@ -96,7 +96,7 @@ export function SchemaMarkup({ page }: SchemaMarkupProps) {
       ],
       athletics: [
         { q: "How does a Recovery Pod benefit a university athletics program?", a: "A Recovery Pod provides 7 clinical-grade modalities (HBOT, red light, infrared sauna, compression, PEMF, lymphatic drainage) that accelerate return-to-play, reduce injury downtime, and serve every sport — all in one on-site installation." },
-        { q: "How does the cost compare to outsourcing recovery?", a: "A complete Recovery Pod costs approximately $45,000 — a one-time investment that replaces $100K+/year in outsourced cryo sessions, off-campus recovery centers, and fragmented treatment services." },
+        { q: "How does the cost compare to outsourcing recovery?", a: "A complete Recovery Pod costs approximately $49,000 — a one-time investment that replaces $100K+/year in outsourced cryo sessions, off-campus recovery centers, and fragmented treatment services." },
         { q: "Can one pod serve all our sports programs?", a: "Yes. The Recovery Pod is designed to serve athletes across every sport — football, basketball, soccer, track, swimming, and more. 30+ protocols cover sport-specific recovery needs." },
         { q: "Does our athletic training staff need certification?", a: "BH Labs provides comprehensive training and certification for your athletic trainers. No additional hires required — your existing staff will be fully equipped to run every protocol." },
         { q: "How does recovery technology help with recruiting?", a: "Top recruits compare facilities. A Recovery Pod signals that your program invests in athlete health and performance, giving you a tangible recruiting advantage over programs without dedicated recovery." },

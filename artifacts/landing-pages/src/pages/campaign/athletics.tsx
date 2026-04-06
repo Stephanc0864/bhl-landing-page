@@ -130,7 +130,7 @@ export default function CampaignAthletics() {
                 {
                   icon: DollarSign,
                   title: "Easy Implementation",
-                  desc: "One-time ~$45K investment replaces $100K+/year in outsourced cryo, off-campus recovery, and fragmented treatment services."
+                  desc: "One-time ~$49K investment replaces $100K+/year in outsourced cryo, off-campus recovery, and fragmented treatment services."
                 }
               ].map((item, i) => (
                 <motion.div
@@ -212,7 +212,7 @@ export default function CampaignAthletics() {
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent rounded-2xl flex items-end p-8">
                   <div className="text-primary-foreground">
                     <div className="text-sm font-medium uppercase tracking-wider mb-2 opacity-80">One-Time Investment</div>
-                    <div className="text-3xl md:text-5xl font-sans font-bold tracking-tighter text-secondary">~$45K</div>
+                    <div className="text-3xl md:text-5xl font-sans font-bold tracking-tighter text-secondary">~$49K</div>
                     <div className="text-sm mt-2 opacity-80">vs. $100K+/year in outsourced recovery</div>
                   </div>
                 </div>

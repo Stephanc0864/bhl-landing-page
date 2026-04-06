@@ -76,7 +76,7 @@ export default function Hotels() {
               </motion.h1>
               
               <motion.p variants={FADE_UP} className="text-base md:text-lg lg:text-xl text-muted-foreground mb-6 md:mb-10 max-w-2xl leading-relaxed">
-                Install a turnkey BH Labs Recovery Pod in your hotel. Generate <span className="text-primary font-bold text-xl md:text-2xl lg:text-3xl">$25K+ monthly revenue</span> with zero additional staff. Clinical biohacking meets luxury hospitality.
+                Install a turnkey BH Labs Recovery Pod in your hotel. Generate <span className="text-primary font-bold text-xl md:text-2xl lg:text-3xl">$60K+ monthly revenue</span> with zero additional staff. Clinical biohacking meets luxury hospitality.
               </motion.p>
               
               <motion.div variants={FADE_UP}>
@@ -114,7 +114,7 @@ export default function Hotels() {
         <section className="py-8 bg-secondary/30 border-b border-border">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <p className="text-base md:text-lg text-foreground max-w-4xl mx-auto text-center leading-relaxed">
-              <strong>BH Labs installs turnkey Recovery Pods</strong> — HBOT, red light therapy, infrared sauna, PEMF, and lymphatic drainage — in hotels and resorts. A complete pod costs approximately <strong>$45,000</strong>, generates <strong>$25,000+/month</strong> in new wellness revenue, and pays for itself in <strong>under 2 months</strong>. No additional staff required. Based in Miami, FL.
+              <strong>BH Labs installs turnkey Recovery Pods</strong> — HBOT, red light therapy, infrared sauna, PEMF, and lymphatic drainage — in hotels and resorts. A complete pod costs approximately <strong>$49,000</strong>, generates <strong>$60,000+/month</strong> in new wellness revenue, and typically pays for itself within <strong>6-12 months</strong>. No additional staff required. Based in Miami, FL.
             </p>
           </div>
         </section>
@@ -139,20 +139,20 @@ export default function Hotels() {
                   {[
                     {
                       title: "ADR Revenue",
-                      value: "$21,000/mo",
-                      subtext: "200 rooms × 70% occupancy × $5/night wellness surcharge",
+                      value: "$42,000/mo",
+                      subtext: "200 rooms × 70% occupancy × $10/night wellness surcharge",
                       icon: TrendingUp
                     },
                     {
                       title: "A-La-Carte Sessions",
-                      value: "$6,000/mo",
-                      subtext: "~10 walk-in sessions/day at $20/session average",
+                      value: "$20,400/mo",
+                      subtext: "~8 walk-in sessions/day at $85/session average ($75–$300 range)",
                       icon: DollarSign
                     },
                     {
                       title: "Payback Period",
                       value: "< 2 Months",
-                      subtext: "On a ~$45,000 pod investment with combined revenue streams",
+                      subtext: "On a ~$49,000 pod investment with combined revenue streams",
                       icon: Zap
                     },
                     {
@@ -199,7 +199,7 @@ export default function Hotels() {
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent rounded-2xl flex items-end p-8">
                   <div className="text-primary-foreground">
                     <div className="text-sm font-medium uppercase tracking-wider mb-2 opacity-80">Combined Annual Revenue</div>
-                    <div className="text-3xl md:text-5xl font-sans font-bold tracking-tighter text-secondary">+$324,000</div>
+                    <div className="text-3xl md:text-5xl font-sans font-bold tracking-tighter text-secondary">+$734,000</div>
                     <div className="text-sm mt-2 opacity-80">ADR surcharge + a-la-carte sessions</div>
                   </div>
                 </div>
@@ -221,7 +221,7 @@ export default function Hotels() {
               <h2 className="text-2xl md:text-3xl font-serif text-foreground mb-6">What's the cost of <span className="text-red-600 italic">not</span> installing a Recovery Pod?</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="bg-white rounded-xl p-6 border border-red-200 shadow-sm">
-                  <div className="text-3xl font-serif text-red-600 mb-2">$324K</div>
+                  <div className="text-3xl font-serif text-red-600 mb-2">$734K</div>
                   <p className="text-sm text-muted-foreground">Annual revenue left on the table from unused or underperforming space</p>
                 </div>
                 <div className="bg-white rounded-xl p-6 border border-red-200 shadow-sm">
@@ -402,8 +402,8 @@ export default function Hotels() {
         </section>
 
         <FAQSection items={[
-          { question: "How much revenue can a hotel wellness pod generate?", answer: "A BH Labs Recovery Pod generates approximately $27,000 per month — $21,000 from ADR wellness surcharges ($5/night across 200 rooms at 70% occupancy) plus $6,000 from a-la-carte walk-in sessions. That's $324,000 in annual revenue." },
-          { question: "What is the payback period for a hotel Recovery Pod?", answer: "Less than 2 months. The complete pod investment is approximately $45,000, and at $27,000/month in combined revenue, the investment pays for itself in under 60 days." },
+          { question: "How much revenue can a hotel wellness pod generate?", answer: "A BH Labs Recovery Pod generates approximately $61,000 per month — $42,000 from ADR wellness surcharges ($10/night across 200 rooms at 70% occupancy) plus $20,400 from guest recovery sessions (8 sessions/day at $85 average). That's over $730,000 in annual revenue." },
+          { question: "What is the payback period for a hotel Recovery Pod?", answer: "Typically 6-12 months depending on utilization, with high-traffic properties achieving significantly faster payback. The complete pod investment is approximately $49,000 — intentionally priced below traditional spa buildouts ($150K-$500K)." },
           { question: "Does the hotel need to hire additional staff?", answer: "No. BH Labs trains and certifies your existing spa staff to operate the Recovery Pod. Zero additional hires required." },
           { question: "What equipment is included in a Recovery Pod?", answer: "Each Recovery Pod includes an HBOT (Hyperbaric Oxygen Therapy) chamber, red light therapy panels, an infrared sauna, lymphatic drainage suits, and PEMF (Pulsed Electromagnetic Field) devices — seven clinical-grade modalities total." },
           { question: "How much space does a Recovery Pod require?", answer: "BH Labs provides custom architectural design to fit your available space. Our in-house architect configures the layout to maximize efficiency within your property." },
