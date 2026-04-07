@@ -8,8 +8,8 @@ function fmt(n: number): string {
 function fmtPayback(months: number): string {
   if (months <= 0) return "—";
   if (months < 1) return "<1";
-  if (months < 2) return "1";
-  return Math.ceil(months).toString();
+  // Show one decimal for precision (e.g. "1.7", "3.2")
+  return months.toFixed(1);
 }
 
 export default function ROICalculatorSlide() {
