@@ -17,7 +17,7 @@ export default function PricingSlide() {
 
         <div className="flex gap-[1.5vw] flex-1">
           <div className="flex-1 bg-white rounded-[1vw] p-[2vw] border border-primary/10 flex flex-col">
-            <p className="font-body text-muted text-[1.1vw] font-semibold tracking-[0.15em] uppercase mb-[1vh]">
+            <p className="font-body text-muted text-[1.1vw] font-semibold tracking-[0.15em] uppercase mb-[2vh]">
               Single Property
             </p>
             <p className="font-display text-primary text-[3vw] font-bold tracking-tight">
@@ -48,13 +48,15 @@ export default function PricingSlide() {
             </p>
           </div>
 
-          <div className="flex-1 bg-primary rounded-[1vw] p-[2vw] flex flex-col relative">
-            <div className="absolute top-[1.5vh] right-[1.5vw] bg-accent text-primary rounded-full px-[0.8vw] py-[0.3vh]">
-              <p className="font-body text-[1vw] font-bold">Best Value</p>
+          <div className="flex-1 bg-primary rounded-[1vw] p-[2vw] flex flex-col relative overflow-hidden">
+            <div className="flex items-center gap-[1vw] mb-[2vh]">
+              <p className="font-body text-accent text-[1.1vw] font-semibold tracking-[0.15em] uppercase">
+                Multi-Property (5+)
+              </p>
+              <span className="bg-accent text-primary rounded-full px-[0.8vw] py-[0.3vh] font-body text-[0.9vw] font-bold whitespace-nowrap">
+                Best Value
+              </span>
             </div>
-            <p className="font-body text-accent text-[1.1vw] font-semibold tracking-[0.15em] uppercase mb-[1vh]">
-              Multi-Property (5+)
-            </p>
             <p className="font-display text-white text-[3vw] font-bold tracking-tight">
               $39,000
             </p>
@@ -84,7 +86,7 @@ export default function PricingSlide() {
           </div>
 
           <div className="flex-1 bg-white rounded-[1vw] p-[2vw] border border-primary/10 flex flex-col">
-            <p className="font-body text-muted text-[1.1vw] font-semibold tracking-[0.15em] uppercase mb-[1vh]">
+            <p className="font-body text-muted text-[1.1vw] font-semibold tracking-[0.15em] uppercase mb-[2vh]">
               Enterprise (20+)
             </p>
             <p className="font-display text-primary text-[3vw] font-bold tracking-tight">
@@ -116,7 +118,7 @@ export default function PricingSlide() {
           </div>
 
           <div className="flex-1 bg-white rounded-[1vw] p-[2vw] border border-accent/30 flex flex-col">
-            <p className="font-body text-accent text-[1.1vw] font-semibold tracking-[0.15em] uppercase mb-[1vh]">
+            <p className="font-body text-accent text-[1.1vw] font-semibold tracking-[0.15em] uppercase mb-[2vh]">
               IV Therapy Add-On
             </p>
             <p className="font-display text-primary text-[3vw] font-bold tracking-tight">
