@@ -85,7 +85,7 @@ export default function SolutionSlide() {
               7 Evidence-Based Modalities
             </p>
             <div className="flex flex-wrap gap-[0.6vw]">
-              {["HBOT", "Red Light", "PEMF", "Cold Plunge", "IR Sauna", "Compression", "Lymphatic"].map((m) => (
+              {["HBOT", "Red Light", "PEMF", "IR Sauna", "Compression", "Lymphatic"].map((m) => (
                 <div key={m} className="bg-primary/10 rounded-[0.3vw] px-[0.7vw] py-[0.4vh]">
                   <p className="font-body text-primary text-[1vw] font-medium">{m}</p>
                 </div>

@@ -43,7 +43,7 @@ export default function ExperienceSlide() {
                   <div className="w-[2.5vw] h-[2.5vw] rounded-full bg-accent/20 flex items-center justify-center shrink-0">
                     <span className="text-accent text-[1.2vw] font-bold">2</span>
                   </div>
-                  <p className="font-body text-white text-[1.3vw]">Cold Plunge</p>
+                  <p className="font-body text-white text-[1.3vw]">IR Sauna</p>
                 </div>
                 <div className="ml-[1.25vw] w-[0.15vw] h-[1.5vh] bg-accent/30" />
                 <div className="flex items-center gap-[1vw]">
@@ -99,19 +99,12 @@ export default function ExperienceSlide() {
                   <div className="w-[2.5vw] h-[2.5vw] rounded-full bg-accent/30 flex items-center justify-center shrink-0">
                     <span className="text-accent text-[1.2vw] font-bold">3</span>
                   </div>
-                  <p className="font-body text-white text-[1.3vw]">Cold Plunge</p>
-                </div>
-                <div className="ml-[1.25vw] w-[0.15vw] h-[1vh] bg-accent/30" />
-                <div className="flex items-center gap-[1vw]">
-                  <div className="w-[2.5vw] h-[2.5vw] rounded-full bg-accent/30 flex items-center justify-center shrink-0">
-                    <span className="text-accent text-[1.2vw] font-bold">4</span>
-                  </div>
                   <p className="font-body text-white text-[1.3vw]">Infrared Sauna</p>
                 </div>
                 <div className="ml-[1.25vw] w-[0.15vw] h-[1vh] bg-accent/30" />
                 <div className="flex items-center gap-[1vw]">
                   <div className="w-[2.5vw] h-[2.5vw] rounded-full bg-accent/30 flex items-center justify-center shrink-0">
-                    <span className="text-accent text-[1.2vw] font-bold">5</span>
+                    <span className="text-accent text-[1.2vw] font-bold">4</span>
                   </div>
                   <p className="font-body text-white text-[1.3vw]">Compression</p>
                 </div>
@@ -140,21 +133,21 @@ export default function ExperienceSlide() {
               <div className="space-y-[1.8vh]">
                 <div className="flex items-center gap-[1vw]">
                   <div className="w-[2.5vw] h-[2.5vw] rounded-full bg-accent/20 flex items-center justify-center shrink-0">
-                    <span className="text-accent text-[1.2vw] font-bold">1–5</span>
+                    <span className="text-accent text-[1.2vw] font-bold">1–4</span>
                   </div>
-                  <p className="font-body text-white text-[1.3vw]">Full 5-modality sequence</p>
+                  <p className="font-body text-white text-[1.3vw]">Full 4-modality sequence</p>
                 </div>
                 <div className="ml-[1.25vw] w-[0.15vw] h-[1.5vh] bg-accent/30" />
                 <div className="flex items-center gap-[1vw]">
                   <div className="w-[2.5vw] h-[2.5vw] rounded-full bg-accent/20 flex items-center justify-center shrink-0">
-                    <span className="text-accent text-[1.2vw] font-bold">6</span>
+                    <span className="text-accent text-[1.2vw] font-bold">5</span>
                   </div>
                   <p className="font-body text-white text-[1.3vw]">HBOT (60 min)</p>
                 </div>
                 <div className="ml-[1.25vw] w-[0.15vw] h-[1.5vh] bg-accent/30" />
                 <div className="flex items-center gap-[1vw]">
                   <div className="w-[2.5vw] h-[2.5vw] rounded-full bg-accent/20 flex items-center justify-center shrink-0">
-                    <span className="text-accent text-[1.2vw] font-bold">7</span>
+                    <span className="text-accent text-[1.2vw] font-bold">6</span>
                   </div>
                   <p className="font-body text-white text-[1.3vw]">Optional IV Therapy</p>
                 </div>
