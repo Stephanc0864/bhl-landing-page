@@ -58,7 +58,7 @@ export default function ClosingSlide() {
         <div className="w-[40vw] h-[0.15vh] bg-accent/30 mb-[4vh]" />
 
         <p className="font-body text-white text-[1.6vw] font-medium">
-          Stephan Coles — Co-Founder &amp; CEO
+          Stephan Coles — Co-Founder
         </p>
         <p className="font-body text-white/70 text-[1.3vw] mt-[1vh]">
           stephan.coles@thebiohacklab.com
